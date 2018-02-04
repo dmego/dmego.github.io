@@ -129,26 +129,9 @@
             </div>
           {% endif %}
           <div style="height: 40px;"></div>
-          <div id="player1" class="aplayer" style="width:210px; height: 66px; background-color: #FFFFFF;margin:0 auto;"></div>
-            <script src="/js/src/APlayer.min.js"></script>
-            <script type="text/javascript">
-            var ap = new APlayer({
-              element: document.getElementById('player1'),
-              narrow: false,
-              autoplay: false,
-              showlrc: false,
-              mutex: false,
-              theme: '#ad7a86',
-              mode: 'circulation',
-              music:
-                  {
-                      title: 'Faded',
-                      author: 'Alan Walker',
-                      url: 'http://sc1.111ttt.com/2015/1/12/09/105091830045.mp3',
-                      pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1185510269,3194454822&fm=27&gp=0.jpg'
-                  },
-            });
-          </script>
+          
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=210px height=66px 
+          src="//music.163.com/outchain/player?type=2&id=507134165&auto=0&height=66"></iframe>
 
           {% include '../_custom/sidebar.swig' %}
         </div>
