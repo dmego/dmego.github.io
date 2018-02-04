@@ -368,8 +368,8 @@ submitForm:function(e){
 	|--feedpic(File) //反馈图片
 	|--feedinfo(String) //反馈用户的设备信息 	
 
-
 ## 感谢以下开源项目、网站社区
+
 - [Bmob后端云](https://docs.bmob.cn/)
 - [微信小程序联盟](http://www.wxapp-union.com/)
 - [WeUI for 小程序](https://github.com/Tencent/weui-wxss)
