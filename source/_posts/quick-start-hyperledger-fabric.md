@@ -7,19 +7,19 @@ categories: [Hyperledger学习笔记]
 tags: [Fabric,区块链]
 copyright: true
 ---
-
 <center>
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/180515/fEAgecbB2l.png?imageslim" width="300px" />
 </center>
-
 
 ## 前言
 最近在参加一个比赛,使用到了区块链的开源软件```hyperledger```,由于之前从未接触过区块链,以及和区块链开发相关的内容,所有在网上查阅了大量的资料,并且通过学习[yeasy(杨宝华)](http://yeasy.github.io/)开源的入门书籍[区块链技术指南](https://github.com/yeasy/blockchain_guide)以及进阶学习的《区块链原理、设计与应用》,对区块链的一些相关概念有了一定认识。这里记录的是我安装```hyperledger fabric```的所有步骤，同时也是一个快速搭建单机环境的参考教程。
 
 ## 准备好机器环境
 本人的区块链网络部署在```VMware```搭建的ubuntu16.04的环境下（推荐使用该版本的系统），详细的系统版本为```ubuntu-16.04.4-desktop-amd64.iso  ```,是从[网易开源镜像站](http://mirrors.163.com/ubuntu-releases/16.04/)下载的。对于如何使用```VMware```安装虚拟机以及让虚拟机访问网络，网上有许多教程，这里就不重复讲了。
+
 <!--more -->
- 当将系统安装完成后，需要更换源，使用```desktop```版的可以直接在设置里面选择最佳服务器,如下图所示
+
+当将系统安装完成后，需要更换源，使用```desktop```版的可以直接在设置里面选择最佳服务器,如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180514/ea2fAlGB2D.png?imageslim)
 若使用的是服务器版本,则可以使用如下命令换成高速的源
 - 先备份原来的源文件
