@@ -14,13 +14,13 @@ copyright: true
 
 # 前言
 
-本教程基本上是对```Marbles```项目的翻译过程. 如果英文比较好的话，建议根据[官方操作说明](https://github.com/IBM-Blockchain/marbles/blob/master/README.md),一步步进行环境部署。当然你也可以参考本教程在自己的主机上部署该项目。
+本教程基本上是对`Marbles`项目的翻译过程. 如果英文比较好的话，建议根据[官方操作说明](https://github.com/IBM-Blockchain/marbles/blob/master/README.md),一步步进行环境部署。当然你也可以参考本教程在自己的主机上部署该项目。
 
 # Marbles 介绍
 
 ## 关于 Marbles
 
-- 这个应用程序的基础网络是 [Hyperledger Fabric](https://github.com/hyperledger/fabric/)，后者是一个 ```Linux Foundation``` 项目。 您可能想查阅以下操作说明来稍微了解一下 ```Hyperledger Fabric```
+- 这个应用程序的基础网络是 [Hyperledger Fabric](https://github.com/hyperledger/fabric/)，后者是一个 `Linux Foundation` 项目。 您可能想查阅以下操作说明来稍微了解一下 `Hyperledger Fabric`
 - 本演示旨在帮助开发人员了解链代码的基础知识以及如何使用 Fabric 网络开发应用程序
 - 这是一个非常简单的资产转移演示。多个用户可以创建并相互转移弹珠。
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/IHG6K7fdL4.gif)
@@ -29,18 +29,18 @@ copyright: true
 
 ## 版本
 
-各种版本的 ```marbles``` 同时存在。 本版本兼容 ```Hyperledger Fabric v1.1x```。 你可以通过检出别的分支来获取别的版本的 ```marble```,这里演示使用的是```ae4e37d```分支
+各种版本的 `marbles` 同时存在。 本版本兼容 `Hyperledger Fabric v1.1x`。 你可以通过检出别的分支来获取别的版本的 `marble`,这里演示使用的是`ae4e37d`分支
 
 ## 应用程序背景
 
-请大家集中注意力，这个应用程序将演示如何利用  ```Hyperledger Fabric``` 在许多弹珠所有者之间转移弹珠。 我们将在 ```Node.js``` 中使用一些 ```GoLang``` 代码完成此任务。 该应用程序的后端将是在我们的区块链网络中运行的 ```GoLang``` 代码。 从现在开始，这些 ```GoLang``` 代码将称为“链代码”或“cc”。 该链代码本身会创建一颗弹珠，将它存储到链代码状态中。 该链代码本身可以将数据作为字符串存储在键/值对设置中。 因此，我们将字符串化 ```JSON```对象，以便存储更复杂的结构.
+请大家集中注意力，这个应用程序将演示如何利用  `Hyperledger Fabric` 在许多弹珠所有者之间转移弹珠。 我们将在 `Node.js` 中使用一些 `GoLang` 代码完成此任务。 该应用程序的后端将是在我们的区块链网络中运行的 `GoLang` 代码。 从现在开始，这些 `GoLang` 代码将称为“链代码”或“cc”。 该链代码本身会创建一颗弹珠，将它存储到链代码状态中。 该链代码本身可以将数据作为字符串存储在键/值对设置中。 因此，我们将字符串化 `JSON`对象，以便存储更复杂的结构.
 >弹珠的属性包括：
 - ID（唯一字符串，将用作键）
 - 颜色（字符串，CSS 颜色名称）
 - 尺寸（int，以毫米为单位）
 - 所有者（字符串）
 
-我们将创建一个用户界面，它可以设置这些值并将它们存储在区块链的账本中。 弹珠实际上是一个键值对。 键为弹珠 ID，值为一个包含（上面列出的）弹珠属性的 ```JSON``` 字符串。 与 ```cc``` 的交互是通过对网络上的一个对等节点使用 ```gRPC``` 协议来完成的。 ```gRPC``` 协议的细节由一个名为 [Hyperledger Fabric Client SDK](https://www.npmjs.com/package/fabric-client) 的 SDK 处理。 请查看下图了解拓扑结构细节。
+我们将创建一个用户界面，它可以设置这些值并将它们存储在区块链的账本中。 弹珠实际上是一个键值对。 键为弹珠 ID，值为一个包含（上面列出的）弹珠属性的 `JSON` 字符串。 与 `cc` 的交互是通过对网络上的一个对等节点使用 `gRPC` 协议来完成的。 `gRPC` 协议的细节由一个名为 [Hyperledger Fabric Client SDK](https://www.npmjs.com/package/fabric-client) 的 SDK 处理。 请查看下图了解拓扑结构细节。
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/EEAimf54Dk.png?imageslim)
 
 ### 应用程序通信流
@@ -55,7 +55,7 @@ copyright: true
 # Marbles 项目环境配置 
 
 这里使用的是本地的 Hyperledger Fabric 网络来部署项目,如果想使用 IBM Cloud IBM Blockchain 服务来部署该项目,请参考前言中给的官方文档.
-- 注意:本教程使用的系统环境是: ```ubuntu16.04```
+- 注意:本教程使用的系统环境是: `ubuntu16.04`
 
 ## 设置 Chaincode(链码) 开发环境
 如果您通过本人的上一篇博客[基于ubuntu16.04快速构建Hyperledger Fabric网络](http://dmego.me/2018/05/14/quick-start-hyperledger-fabric.html)已经搭建好了一个 Hyperledger Fabric 网络,那么这里只需要安装 Node.js 的环境并验证环境是否正确即可,如果您没有在本地搭建 Hyperledger Fabric 网络,建议您通过上述博客先在本地构建好网络环境. 
@@ -81,20 +81,20 @@ $ echo $GOPATH
 ```
 这里的 ubuntu是我的用户名,表示我的 GOPATH  目录是我的主目录下的 go 文件夹,当然你的 GOPATH 不需要匹配上面的那个。它只是很重要的，但你必须把这个变量设置为文件系统上的有效目录.
 ### 安装 Node.js 环境
-首先可以先使用 ```node -v``` 和 ```npm -v``` 命令来验证系统中是否有 Node.js 环境,如果没有安装则需要使用如下命令进行安装:
+首先可以先使用 `node -v` 和 `npm -v` 命令来验证系统中是否有 Node.js 环境,如果没有安装则需要使用如下命令进行安装:
 ```bash
 $ sudo apt-get install nodejs
 $ sudo apt install nodejs-legacy
 $ sudo apt install npm
 ```
-安装完成之后使用 ```node -v``` 和 ```npm -v``` 命令来查看版本信息:
+安装完成之后使用 `node -v` 和 `npm -v` 命令来查看版本信息:
 ```bash
 $ node -v
 v4.2.6
 $ npm -v
 3.5.2
 ```
-遗憾的是通过这种方式安装的 Node.js 版本都比较低,而且并不符合我们项目的环境要求```(官网文档中出现的版本为:node:v6.10.1;npm:3.10.10)```,为了避免因软件版本不同而引起的问题,我们还需要对 Node 以及 npm 的版本进行升级操作
+遗憾的是通过这种方式安装的 Node.js 版本都比较低,而且并不符合我们项目的环境要求`(官网文档中出现的版本为:node:v6.10.1;npm:3.10.10)`,为了避免因软件版本不同而引起的问题,我们还需要对 Node 以及 npm 的版本进行升级操作
 - 先配置 npm 仓库,因为国内的网络环境,直接从 npm 官方源安装软件包速度会特别慢
 ```bash
 $ npm install -g nrm
@@ -144,20 +144,20 @@ $ npm -v
 
 ### Hyperledger Fabric 版本切换
 
-官方文档中提供了三种选择,一种是不想对链码进行修改的,下面操作可以不必执行.而想要自己修改链码的而且想使用最新版本 Fabric 的可以切换到最新的分支,虽然说该项目兼容 ```Hyperledger Fabric v1.1x```,但是出于避免出现未知的错误,建议将分支切换到文档中使用的版本``` ae4e37d```.切换步骤命令如下
+官方文档中提供了三种选择,一种是不想对链码进行修改的,下面操作可以不必执行.而想要自己修改链码的而且想使用最新版本 Fabric 的可以切换到最新的分支,虽然说该项目兼容 `Hyperledger Fabric v1.1x`,但是出于避免出现未知的错误,建议将分支切换到文档中使用的版本` ae4e37d`.切换步骤命令如下
 - 将此版本与网络/ Fabric 的提交哈希匹配（前7个字符将起作用）
 ```bash
 $ cd $GOPATH/src/github.com/hyperledger/fabric
 $ git checkout ae4e37d
 ```
-如果按照我的上篇博客配置的,这里的 ```$GOPATH``` 既用户主目录下的 go 文件夹,
+如果按照我的上篇博客配置的,这里的 `$GOPATH` 既用户主目录下的 go 文件夹,
 - 使用git分支确认级别。它应该显示与您提供的相符的提交级别
 ```bash
 $ git branch
 * (HEAD detached at ae4e37d)
   release-1.1
 ```
-显示已经切换到``` ae4e37d```分支,当前最新发布版本为```1.1```. 当然,你如果想知道``` ae4e37d```分支的具体信息,可以通过如下命令查看:
+显示已经切换到` ae4e37d`分支,当前最新发布版本为`1.1`. 当然,你如果想知道` ae4e37d`分支的具体信息,可以通过如下命令查看:
 ```bash
 $ git log -p
 commit ae4e37dbafe74997534ab317dec5c3f4f53b6a84
@@ -225,7 +225,7 @@ $ export PATH=$PWD/bin:$PATH
 ```bash
 $ vim ~/.profile
 ```
-打开后在最后一行插入插入``` export PATH=/home/ubuntu/fabric-samples/bin:$PATH```,这里可以先使用 ```pwd``` 命令来获取您本地```fabric-samples```的目录,然后将上面命令中的 ```$PWD``` 换成该目录即可,最后使用 ```:wq``` 保存退出,执行下面命令刷新一下
+打开后在最后一行插入插入` export PATH=/home/ubuntu/fabric-samples/bin:$PATH`,这里可以先使用 `pwd` 命令来获取您本地`fabric-samples`的目录,然后将上面命令中的 `$PWD` 换成该目录即可,最后使用 `:wq` 保存退出,执行下面命令刷新一下
 ```bash
 $ source  ~/.profile
 ```
@@ -239,7 +239,7 @@ $ source  ~/.profile
 一两分钟后，命令提示符将返回,运行结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/hGLmDfj1KH.png?imageslim)
 
-现在运行该命令 ```docker ps``` 查看当前正在运行的`Docker`容器。您应该看到类似于以下内容的内容：
+现在运行该命令 `docker ps` 查看当前正在运行的`Docker`容器。您应该看到类似于以下内容的内容：
 
 ```bash
 CONTAINER ID        IMAGE                                   COMMAND                  CREATED             STATUS              PORTS                                            NAMES
