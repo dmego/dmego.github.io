@@ -12,14 +12,14 @@ copyright: true
 </center>
 
 ## 前言
-最近在参加一个比赛,使用到了区块链的开源软件`hyperledger`,由于之前从未接触过区块链,以及和区块链开发相关的内容,所有在网上查阅了大量的资料,并且通过学习[yeasy(杨宝华)](http://yeasy.github.io/)开源的入门书籍[区块链技术指南](https://github.com/yeasy/blockchain_guide)以及进阶学习的《区块链原理、设计与应用》,对区块链的一些相关概念有了一定认识。这里记录的是我安装`hyperledger fabric`的所有步骤，同时也是一个快速搭建单机环境的参考教程。
+最近在参加一个比赛,使用到了区块链的开源软件```hyperledger```,由于之前从未接触过区块链,以及和区块链开发相关的内容,所有在网上查阅了大量的资料,并且通过学习[yeasy(杨宝华)](http://yeasy.github.io/)开源的入门书籍[区块链技术指南](https://github.com/yeasy/blockchain_guide)以及进阶学习的《区块链原理、设计与应用》,对区块链的一些相关概念有了一定认识。这里记录的是我安装```hyperledger fabric```的所有步骤，同时也是一个快速搭建单机环境的参考教程。
 
 ## 准备好机器环境
-本人的区块链网络部署在`VMware`搭建的ubuntu16.04的环境下（推荐使用该版本的系统），详细的系统版本为`ubuntu-16.04.4-desktop-amd64.iso  `,是从[网易开源镜像站](http://mirrors.163.com/ubuntu-releases/16.04/)下载的。对于如何使用`VMware`安装虚拟机以及让虚拟机访问网络，网上有许多教程，这里就不重复讲了。
+本人的区块链网络部署在```VMware```搭建的ubuntu16.04的环境下（推荐使用该版本的系统），详细的系统版本为```ubuntu-16.04.4-desktop-amd64.iso  ```,是从[网易开源镜像站](http://mirrors.163.com/ubuntu-releases/16.04/)下载的。对于如何使用```VMware```安装虚拟机以及让虚拟机访问网络，网上有许多教程，这里就不重复讲了。
 
 <!--more -->
 
-当将系统安装完成后，需要更换源，使用`desktop`版的可以直接在设置里面选择最佳服务器,如下图所示
+当将系统安装完成后，需要更换源，使用```desktop```版的可以直接在设置里面选择最佳服务器,如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180514/ea2fAlGB2D.png?imageslim)
 若使用的是服务器版本,则可以使用如下命令换成高速的源
 - 先备份原来的源文件
@@ -80,20 +80,20 @@ deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe 
 deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse  
 deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse 
 ```
-复制进去后,使用`:wq`保存,然后使用如下命令更新一下
+复制进去后,使用```:wq```保存,然后使用如下命令更新一下
 ```bash
 $ sudo apt-get install update
 ```
 
-执行完成后环境就基本上准备好了,如果使用的是服务器版本,觉得使用不方便的话,可以使用`xshell`之类的远程连接工具连接你的虚拟机。如果你的环境搭建再云服务器上，例如阿里云或者腾讯云，可以不用更新源，直接在自己的主机上使用远程连接工具连接上云主机，环境就算完成了（若在本地不能连接上云主机，或者虚拟机，检查一下`ssh`是否已经安装并启动,若没有，可以参加网上的教程，配置远程连接）。
+执行完成后环境就基本上准备好了,如果使用的是服务器版本,觉得使用不方便的话,可以使用```xshell```之类的远程连接工具连接你的虚拟机。如果你的环境搭建再云服务器上，例如阿里云或者腾讯云，可以不用更新源，直接在自己的主机上使用远程连接工具连接上云主机，环境就算完成了（若在本地不能连接上云主机，或者虚拟机，检查一下```ssh```是否已经安装并启动,若没有，可以参加网上的教程，配置远程连接）。
 
 ## 安装GO语言环境
-不推荐使用`apt`的方式安装GO,原因是这样安装的版本比较老，推荐安装最新版的GO,具体安装命令如下
+不推荐使用```apt```的方式安装GO,原因是这样安装的版本比较老，推荐安装最新版的GO,具体安装命令如下
 - 下载最新的GO安装包，具体的最新版本号可以从[Golang官网](https://golang.org/)上查看
 ```bash
 $ wegt https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz
 ```
-- 解压安装包到`/usr/local`目录下
+- 解压安装包到```/usr/local```目录下
 ```bash
 $ sudo tar -C usr/local -xzf go1.10.2.linux-amd64.tar.gz
 ``` 
@@ -109,12 +109,12 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 ```
-使用`:wq`保存后使用如下命令将保存立即刷新
+使用```:wq```保存后使用如下命令将保存立即刷新
 ```bash
 $ source ~/.profile
 ```
-- 建立`GOPATH`目录
-由于在环境变量中配置了`GOPATH`目录的位置，所以我们需要在家目录下创建该文件夹
+- 建立```GOPATH```目录
+由于在环境变量中配置了```GOPATH```目录的位置，所以我们需要在家目录下创建该文件夹
 ```bash
 $ cd ~
 $ mkdir go
@@ -125,16 +125,16 @@ $ go version
 go version go1.10 linux/amd64
 ```
 ## 安装Docker
-这里使用的`Docker`的[官方文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/)来安装docker
-- 如果系统中有旧版本的`Docker`,需要先使用如下命令卸载
+这里使用的```Docker```的[官方文档](https://docs.docker.com/install/linux/docker-ce/ubuntu/)来安装docker
+- 如果系统中有旧版本的```Docker```,需要先使用如下命令卸载
 ```bash
 $ sudo apt-get remove docker docker-engine docker.io
 ```
-- 更新`apt`包索引
+- 更新```apt```包索引
 ```bash
 $ sudo apt-get update
 ```
-- 安装软件包以允许`apt`通过HTTPS使用远程库
+- 安装软件包以允许```apt```通过HTTPS使用远程库
 ```bash
 $ sudo apt-get install \
     apt-transport-https \
@@ -143,11 +143,11 @@ $ sudo apt-get install \
     software-properties-common
 ```
 若出现无法识别命令，可以先将该命令复制到一个文本文件中，将``\``去掉，将所有语句放在同一行下，然后复制执行。
-- 添加`Docker`的官方`GPG`密钥
+- 添加```Docker```的官方```GPG```密钥
 ```bash
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
-- 通过搜索指纹的最后8个字符，确认您现在拥有指纹识别码`9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88`
+- 通过搜索指纹的最后8个字符，确认您现在拥有指纹识别码```9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88```
 ```bash
 $ sudo apt-key fingerprint 0EBFCD88
 
@@ -163,11 +163,11 @@ $ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 ```
-- 再次更新`apt`包索引
+- 再次更新```apt```包索引
 ```bash
 $ sudo apt-get update
 ```
-- 使用`apt`安装`docker-ce`
+- 使用```apt```安装```docker-ce```
 ```bash
 $ sudo apt-get install docker-ce
 ```
@@ -194,12 +194,12 @@ Server:
   OS/Arch:      linux/amd64
   Experimental: false
 ```
-安装完成之后，需要将当前用户添加到`docker`用户组，然后为该用户添加`sudo`权限
-- 若没有创建`docker`用户组，可以使用如下命令创建一个`GID`为`999`，组名为`docker`的用户组
+安装完成之后，需要将当前用户添加到```docker```用户组，然后为该用户添加```sudo```权限
+- 若没有创建```docker```用户组，可以使用如下命令创建一个```GID```为```999```，组名为```docker```的用户组
 ```bash
 $ sudo groupadd –g 999 docker
 ```
-- 将当前用户(ubuntu)添加到`docker`用户组并分配`sudo`权限
+- 将当前用户(ubuntu)添加到```docker```用户组并分配```sudo```权限
 ```bash
 $ sudo usermod -aG docker ubuntu
 ```
@@ -218,35 +218,35 @@ $ sudo systemctl restart docker
 
 
 ## 安装Docker-Compose
- `Docker-Compose`是支持通过模板脚本批量创建的一个组件。在安装 `Docker-Compose`之前，需要安装`python-pip`
-- 安装`python-pip`
+ ```Docker-Compose```是支持通过模板脚本批量创建的一个组件。在安装 ```Docker-Compose```之前，需要安装```python-pip```
+- 安装```python-pip```
 ```bash
 $ sudo apt-get python-pip
 ```
-- 下载 `Docker-Compose`，这里使用的是国内的DaoClound加速器进行下载
+- 下载 ```Docker-Compose```，这里使用的是国内的DaoClound加速器进行下载
 ```bash
 $ curl -L https://get.daocloud.io/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
 ```
-- 将`Docker-Compose`文件夹移动到`/usr/local/bin`目录下
+- 将```Docker-Compose```文件夹移动到```/usr/local/bin```目录下
 ```bash
 $ sudo mv ~/docker-compose /usr/local/bin/docker-compose 
 ```
-- 为`Docker-Compose`附上可执行权限
+- 为```Docker-Compose```附上可执行权限
 ```bash
 $ chmod +x /usr/local/bin/docker-compose
 ```
 
 ## 下载Fabric源码
-- 先在`GOPATH`下创建对应的目录
+- 先在```GOPATH```下创建对应的目录
 ```bash
 $ mkdir -p ~/go/src/github.com/hyperledger
 ```
-- 切换到对应目录，使用`Git`命令将`fabric`的源码从github上克隆下来
+- 切换到对应目录，使用```Git```命令将```fabric```的源码从github上克隆下来
 ```bash
 $ cd ~/go/src/github.com/hyperledger
 $ git clone https://github.com/hyperledger/fabric.git
 ```
-- 由于Fabric一直在更新，而我们并不需要使用最新的源码，所有将版本切换到`v1.0.0`
+- 由于Fabric一直在更新，而我们并不需要使用最新的源码，所有将版本切换到```v1.0.0```
 ```bash
 $ cd ~/go/src/github.com/hyperledger/fabric
 $ git checkout v1.0.0
@@ -287,71 +287,71 @@ hyperledger/fabric-baseos               x86_64-0.3.1        4b0cab202084        
 出现以上结果说明镜像已经下载成功
 
 ## 启动Fabric网络并运行e2e_cli项目
-- 进入`e2e_cli`目录，并执行启动命令
+- 进入```e2e_cli```目录，并执行启动命令
 ```bash
 $ cd ~/go/src/github.com/hyperledger/fabric/examples/e2e_cli/
 $ ./network_setup.sh up
 ```
 这个过程做了如下操作
->1.编译生成`Fabric`公私钥，证书的程序，程序在目录：`fabric/release/linux-amd64/bin`下
+>1.编译生成```Fabric```公私钥，证书的程序，程序在目录：```fabric/release/linux-amd64/bin```下
 
->2.基于`configtx.yaml`生成创世区块和通道相关信息，并保存到`channel-artifacts`文件夹中
+>2.基于```configtx.yaml```生成创世区块和通道相关信息，并保存到```channel-artifacts```文件夹中
 
->3.基于`crypto-config.yaml`生成公私钥和证书信息，并保存在`crypto-config`文件夹中
+>3.基于```crypto-config.yaml```生成公私钥和证书信息，并保存在```crypto-config```文件夹中
 
->4.基于`docker-compose-cli.yaml`启动`1 Orderer + 4 Peer + 1 CLI`的`Fabric`容器
+>4.基于```docker-compose-cli.yaml```启动```1 Orderer + 4 Peer + 1 CLI```的```Fabric```容器
 
->5.在`CLI`启动的时候，会运行`srcipt/script.sh`文件，这个脚本文件包含了创建`Channel`,加入`Channel`，安装`Example02`,运行`Example02`等功能
+>5.在```CLI```启动的时候，会运行```srcipt/script.sh```文件，这个脚本文件包含了创建```Channel```,加入```Channel```，安装```Example02```,运行```Example02```等功能
 
 最后运行完成，我们会看到如下截图，说明网络启动成功了
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180514/Ijek4E05ea.png?imageslim)
 
 ## 手动测试一下Fabric网络
-我们以安装好的`Example02`进行测试,在官方例子中，`channel`的名字是`mychannel`,链码的名字是`mycc`,我们首先重新打开一个命令行，然后进入`CLI`，
+我们以安装好的```Example02```进行测试,在官方例子中，```channel```的名字是```mychannel```,链码的名字是```mycc```,我们首先重新打开一个命令行，然后进入```CLI```，
 - 输入以下命令即可
 ```bash
 $ docker exec -it cli bash
 ```
-- 运行以下命令可以查询`a`账户的余额
+- 运行以下命令可以查询```a```账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 ```
 查询结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/1LKAbjBimb.png?imageslim)
-可以看到`a`账户的余额现在是90
-- 运行以下命令可以查询`b`账户的余额
+可以看到```a```账户的余额现在是90
+- 运行以下命令可以查询```b```账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","b"]}'
 ```
 查询结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/m4gHE5LKcF.png?imageslim)
-可以看到`b`账户的余额现在是210
-- 现在将`b`账户的余额转100给`a`账户，运行如下命令
+可以看到```b```账户的余额现在是210
+- 现在将```b```账户的余额转100给```a```账户，运行如下命令
 ```bash
 peer chaincode invoke -o orderer.example.com:7050  --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","b","a","100"]}'
 ```
 执行结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/Khlal55HBC.png?imageslim)
 可以看到执行成功了
-- 再次查询`a`账户的余额
+- 再次查询```a```账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 ```
 查询结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/hd8f5cdegf.png?imageslim)
-可以看到`a`账户的余额现在是190,比之前多了100
-- 再次查询`b`账户的余额
+可以看到```a```账户的余额现在是190,比之前多了100
+- 再次查询```b```账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","b"]}'
 ```
 查询结果如下图所示
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/IEG6EHChJ4.png?imageslim)
-可以看到`b`账户的余额现在是110,比之前少了100
+可以看到```b```账户的余额现在是110,比之前少了100
 
 调用链码一切正常
 
 ## 关闭区块链网络
-- 退出`CLI`容器
+- 退出```CLI```容器
 ```bash
 root@4941e8bd4bd6:/opt/gopath/src/github.com/hyperledger/fabric/peer# exit
 ```
@@ -364,7 +364,7 @@ $ ./network_setup.sh down
 ![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/afIigmdgDd.png?imageslim)
 
 ## 总结
-至此，部署以及测试`fabric`的环境已经全部完成，下一篇博客我将记录如何在此基础上部署及运行IBM官方区块链例子[marbles(弹珠资产)](https://github.com/IBM-Blockchain/marbles)
+至此，部署以及测试```fabric```的环境已经全部完成，下一篇博客我将记录如何在此基础上部署及运行IBM官方区块链例子[marbles(弹珠资产)](https://github.com/IBM-Blockchain/marbles)
 
 ## 参考
 - [快速搭建一个Fabric 1.0的环境](http://www.cnblogs.com/studyzy/p/7437157.html)
