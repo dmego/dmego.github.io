@@ -6,6 +6,7 @@ comments: true
 categories: [杂]
 tags: [一句人生]
 ---
+<!--more-->
 ### 2017年11月12日
 * 泰戈尔
 <center>
@@ -14,7 +15,7 @@ tags: [一句人生]
 </center>
 
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/171112/LKfFjH5IK1.jpg?imageslim" width="500px" high="450px" />
-<!--more-->
+
 <center>
 有一个早晨我扔掉了所有的昨天
 从此我的脚步就轻盈了

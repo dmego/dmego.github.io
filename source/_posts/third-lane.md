@@ -6,6 +6,7 @@ comments: true
 categories: [情]
 tags: [幻觉]
 ---
+<!--more -->
 * 木青子日
 
 <center>
@@ -13,10 +14,9 @@ tags: [幻觉]
 有一个流浪的南方姑娘
 她喜欢云的白天
 她喜欢星的黑夜
-</center>
+
 <img src="/images/threeXianKou.jpg" width="500px"  high="450px" />
-<!--more -->
-<center>
+
 在北方的第六百五十六个晚上
 雨落在第三个巷口的地方
 南方姑娘啊

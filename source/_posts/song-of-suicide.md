@@ -6,18 +6,20 @@ comments: true
 categories: [病]
 tags: [抑郁成疾]
 ---
+<!-- more -->
 * 作者：海子
+
 <center>
 伏在下午的水中
 窗帘一掀掀
 一两根树枝伸过来
 肉体，水面的宝石
-</center>
+
 ![](/images/SongofSuicide.jpg)
-<center>
+
 是对半分裂的瓶子
 瓶里的水不能分裂
-<!-- more -->
+
 伏在一具斧子上
 像伏在一具琴上
 还有绳索
@@ -27,4 +29,4 @@ tags: [抑郁成疾]
 你把枪打开，独自走回故乡
 像一只鸽子
 倒在猩红的篮子上
-<center>
+</center>

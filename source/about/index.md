@@ -1,22 +1,39 @@
 ---
-title: Dmego's Information
-date: 2017-03-31 01:22:17
+title: 关于
+description: The depth of thinking determines your altitude
+layout: about
 comments: false
+sidebar: custom
 ---
 
-## About Me：
+```js
+{
+  name: 'Dmego'
+  age: 21,
+  gender: '男',
+  profession: 'Backend Developer & Geek',
+  experience: '应届生',
+  address: '河北石家庄',
+  education: '本科',
+  github: 'https://github.com/dmego',
+  blog: 'http://dmego.me',
+  email: 'dmeago@gmail.com',
+  description: '后端开发，极客生活',
 
-* 木青子日
-   ​
-* 执着的
-* 迷茫的
-* 文艺青年很多
+  skills: [
+    ['Java', 'Spring', 'Python', 'Linux', 'SQL'],
+    ['SSH','SSM','Spring Boot'],
+    ['Hadoop','Hive','Hbase','Spark'],
+    ['HyperLedger Fabric','Docker'],
+    ['JavaScript', 'JQuery','HTML+CSS','Bootstrap'],
+    ['Git', 'SVN']
+  ],
 
-## Contact Me:
-
-<p class="contact">
- 微博：<a href="http://weibo.com/zengkaki">木青子日</a>
- 知乎：<a href="https://www.zhihu.com/people/dmego">木青子日</a>
- Github：<a href="https://github.com/dmego" >Dmego</a>
- Email:：<a href="mailto:zengkai12138@outlook.com" >zengkai12138@outlook.com</a>
-</p>
+  devTools: [
+    ['Eclipse & MyEclipse', 'IDEA']
+    ['Visual Studio Code', 'Sublime Text','NotePad++'],
+    ['Chrome DevTools'],
+    ['Navicat', 'SQLyog','SQLDeveloper']
+  ]  
+}
+```

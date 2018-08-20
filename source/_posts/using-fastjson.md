@@ -5,25 +5,30 @@ date: 2018-05-13 19:56
 comments: true
 categories: [java学习笔记]
 tags: [json]
-copyright: true
+toc: true
 ---
-
+<!--more -->
 <center>
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/180513/cE7H2aLhmC.jpg?imageslim" width="250px" />
 </center>
 
 ## 前言
+
 最近在开发过程中使用了大量的`json`作为前后端数据交换的方式,由于之前没有对`json`做过系统的学习,所有在使用过程中查阅了大量的文档与资料,这里主要记录了我在开发后对`json`以及`fastjson`使用的总结
 
 ## JSON 介绍
+
 `JSON`(javaScript Object Notation)是一种轻量级的数据交换格式。主要采用键值对(`{"name": "json"}`)的方式来保存和表示数据。`JSON`是`JS`对象的字符串表示法，它使用文本表示一个`JS`对象的信息，本质上是一个字符串。更多简介见[介绍JSON](http://www.json.org/json-zh.html)。
 
 ## fastjson 简介
+
 在日志解析,前后端数据传输交互中,经常会遇到字符串(String)与`json`,`XML`等格式相互转换与解析，其中`json`以跨语言，跨前后端的优点在开发中被频繁使用，基本上可以说是标准的数据交换格式。[fastjson](https://github.com/alibaba/fastjson)是一个java语言编写的高性能且功能完善的JSON库，它采用一种“假定有序快速匹配”的算法，把`JSON Parse` 的性能提升到了极致。它的接口简单易用，已经被广泛使用在缓存序列化，协议交互，Web输出等各种应用场景中。
-<!--more -->
+
 
 ## fastjson 常用 API
+
 fastjson API 入口类是`com.alibaba.fastjson.JSON`,常用的序列化操作都可以在`JSON`类上的静态方法直接完成。
+
 ```java
 public static final Object parse(String text); // 把JSON文本parse为JSONObject或者JSONArray 
 public static final JSONObject parseObject(String text)； // 把JSON文本parse成JSONObject    
@@ -34,13 +39,18 @@ public static final String toJSONString(Object object); // 将JavaBean序列化�
 public static final String toJSONString(Object object, boolean prettyFormat); // 将JavaBean序列化为带格式的JSON文本 
 public static final Object toJSON(Object javaObject); //将JavaBean转换为JSONObject或者JSONArray。
 ```
+
 ### 使用方法举例
+
 ```java
 //将JSON文本转换为java对象
 import com.alibaba.fastjson.JSON;
 Model model = JSON.parseObject(jsonStr, Model.class);
+
 ```
+
 ### 有关类库的一些说明
+
 - JSONArray : 相当于List<Object>
 - JSONObject: 相当于Map<String,Object>
 

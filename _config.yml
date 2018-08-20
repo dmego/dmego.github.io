@@ -3,17 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dmego的博客
+title: Dmego`Blog
 subtitle: Code create life
-description: 木夏子上   青日未央
+description: 木夏子上 青日未央
 author: 木青子日 
-language: zh-Hans
-timezone: 
-
+language: zh-CN
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://dmego.me/
+url: https://dmego.me/
 root: /
 permalink: :year/:month/:day/:title.html
 permalink_defaults:
@@ -44,6 +43,38 @@ highlight:
   auto_detect: false
   tab_replace:
 
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+  modifyAnchors: ''
+  autolink: true
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+#archive归档文章显示条数
+archive_generator:
+  per_page: 0
+
+#tag
+tag_generator:
+  per_page: 0
+
+#category
+category_generator: 
+  per_page: 0
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -58,57 +89,60 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 5
+per_page: 10
 pagination_dir: page
+
+# atom feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
+sitemap:
+  path: googlesitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: pure
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:dmego/dmego.github.io.git
-  branch: master
-  
-# hexo-admin authentification
-admin:
-  username: dmego
-  password_hash: $2a$10$X791PqFIaRoEuKBwYB5bN.2tH2SrNJraDhPHBxvUOXpRYKf9tH/Ym
-  secret: admin
+  github: git@github.com:dmego/dmego.github.io.git,hexo
 
-# algolia search
-algolia:
-  applicationID: '61EZ9Y8SSC'
-  apiKey: 'fbbd72433693e18845e619208d3bf7f6'
-  adminApiKey: 'cd6b7372d957ee1c4e39971da542b20d'
-  indexName: 'dmegoblog'
-  chunkSize: 5000
-  fields:
-    - title
-    - tags
-    - slug
-    - excerpt
-    - excerpt:strip
-    - photos
-    - gallery     
+# Config for hexo-generator-markdown-it-plus
+markdown_it_plus:
+    highlight: true
+    html: true
+    xhtmlOut: true
+    breaks: true
+    langPrefix:
+    linkify: true
+    typographer:
+    quotes: “”‘’
+    pre_class: highlight
 
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000  
-  
-nofollow:
+# hexo-neat
+neat_enable: true
+neat_html:
   enable: true
-  exclude: 
-  - dmego.me
-    
-githubEmojis:
+  exclude:  
+neat_css:
   enable: true
-  className: github-emoji
-  unicode: false
-  styles:
-  localEmojis:
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'

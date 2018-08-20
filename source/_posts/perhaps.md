@@ -6,7 +6,7 @@ comments: true
 categories: [杂]
 tags: [小诗]
 ---
-
+<!--more-->
 * 舒婷
 
 <center>
@@ -16,10 +16,9 @@ tags: [小诗]
 结果还是错
 也许我们点起一个个灯笼
 又被大风一个个吹灭
-</center>
+
 <img src="/images/xiaoshi-yexu.jpg" width="500px" high="450px" />
-<!--more-->
-<center>
+
 也许燃尽生命烛照黑暗
 身边却没有取暖之火
 也许泪水流尽
@@ -35,4 +34,3 @@ tags: [小诗]
 由于不可抗拒的召唤
 我们没有其它选择
 </center>
-

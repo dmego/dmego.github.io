@@ -1,0 +1,29 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+# before_script:
+#  - npm install -g gulp
+
+script:
+  - hexo g && gulp
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "dmego"
+  - git config user.email "zengkai12138@outlook.com" 
+  - git add .
+  - git commit -m "Update Blog"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - hexo --{Hexo源码分支名称}
+env:
+ global:
+   - GH_REF: github.com/dmego/dmego.github.io.git

@@ -2,8 +2,6 @@
 Thumbs.db
 db.json
 *.log
-_pages/
 node_modules/
 public/
 .deploy*/
-.sass-cache/

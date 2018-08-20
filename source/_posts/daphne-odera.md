@@ -6,6 +6,7 @@ comments: true
 categories: [情]
 tags: [小诗]
 ---
+<!--more-->
 - 席慕蓉
   <center>
   溪水急着要流向海洋
@@ -13,7 +14,6 @@ tags: [小诗]
   <img src="http://ovas9vc9a.bkt.clouddn.com/blogpic/170910/e780FE15lH.png?imageslim" width="360px" />
   在绿树白花的篱前
   曾那样轻易地挥手道别
-  <!--more-->
   而沧桑的二十年后
   我们的魂魄却夜夜归来
 

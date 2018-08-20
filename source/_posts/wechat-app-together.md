@@ -5,8 +5,9 @@ date: 2017-12-04 13:45
 comments: true
 categories: [微信小程序]
 tags: [JS,微信小程序]
-copyright: true
+toc: true
 ---
+<!--more -->
 <center>
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/171203/mjIhk6LFBE.png?imageslim" width="250px" />
 </center>
@@ -26,7 +27,7 @@ copyright: true
 “让兴趣不再孤单，让爱好不再流浪” 是微信小程序《出发吧一起》的主题，这款小程序旨在解决当代大学生在校园生活中的孤独感，让大家找到志同道合的朋友，在跑步、健身、竞赛等活动中找到伙伴。利用小程序即开即用，用完就走的特点与交友相结合，它将会是一款高效快捷、无负担的线下交友利器
 
 本小程序由 [bmob](https://www.bmob.cn/) 后端云提供数据处理与存储支持
-<!--more -->
+
 
 ## 小程序码
 
@@ -129,6 +130,7 @@ data:{
   },
 
 ```
+
 更加详细的代码请前往[Github](https://github.com/dmego/together)查看
 
 ### 4.使用 JS 将字符串格式的时间转换成几秒前,几分钟前...
@@ -256,11 +258,13 @@ submitForm:function(e){
 - [生成小程序二维码](https://docs.bmob.cn/data/wechatApp/b_developdoc/doc/index.html#生成小程序二维码)
 
 ## 截图 & GIF
+
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/171203/7AgDLKB4Jc.gif" width="250" />
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/171203/6DmcGmKfBK.gif" width="250" />
 <img src="http://ovasw3yf9.bkt.clouddn.com/blog/171203/BgbjB83alh.gif" width="250" />
 
 ## Bmob 数据库表结构设计
+
 #### 用户表:(_User，自带表)
 
 	|--objectId //Id
