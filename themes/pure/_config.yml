@@ -159,7 +159,7 @@ douban:
 # PV
 pv:
   busuanzi:
-    enable: true  # 不蒜子统计
+    enable: false  # 不蒜子统计
   leancloud:
     enable: false  # leancloud统计
     app_id: T7nCjkO4hP9tOHMW8U7hBvNU-gzGzoHsz # leancloud <AppID>
