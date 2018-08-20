@@ -23,7 +23,7 @@ after_script:
 
 branches:
   only:
-    - hexo --{Hexo源码分支名称}
+    - hexo
 env:
  global:
    - GH_REF: github.com/dmego/dmego.github.io.git
