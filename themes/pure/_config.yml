@@ -31,7 +31,7 @@ site:
     width: 40
     height: 40
     url: ../images/logo.png
-  title: Hexo # 页面title
+  title: Dmego # 页面title
   favicon: ../images/favicon.png
   board: # 站点公告
     <p>欢迎交流与分享经验!</p>
