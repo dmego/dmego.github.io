@@ -1,6 +1,12 @@
+# 指定语言环境
 language: node_js
 node_js: stable
 
+# 指定缓存模块，可选。缓存可加快编译速度。
+cache:
+  directories:
+    - node_modules
+    
 # S: Build Lifecycle
 install:
   - npm install
@@ -8,7 +14,9 @@ install:
 # before_script:
 #  - npm install -g gulp
 
+# 执行清缓存，生成网页操作
 script:
+  - hexo clean
   - hexo g && gulp
 
 after_script:
@@ -21,6 +29,7 @@ after_script:
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
 
+# 指定博客源码分支
 branches:
   only:
     - hexo
