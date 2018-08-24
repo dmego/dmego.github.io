@@ -8,7 +8,7 @@ tags: [学习笔记]
 toc: true
 ---
 <!--more-->
-![img](http://ovas9vc9a.bkt.clouddn.com/2017-08-27_035118.jpg)
+![Git](learn-git/2017-08-27_035118.jpg)
 
 ## 前言
 
@@ -72,7 +72,7 @@ git reflog
 1. 工作区（Working Directory）：就是能在电脑上看到的目录，比如仓库文件夹
 
 2. 版本库（Repository）：工作区里有一个隐藏目录`.git` ，这个不算工作区，而是git的版本库前面我们讲了往Git版本库里添加文件的时候，分两步，这两步更详细的说是：
-  
+
 - 第一步使用`git add` 把文件添加进去，实际上就是把文件修改添加到暂存区；
 - 第二步使用`git commit`提交修改，实际上是把暂存区的所有内容提交到当前分支因为我们创建Git版本库的时候，Git自动为我们创建了唯一的一个`master` 分支，而`git commit`就是往 `master`分支上提交更改。也可以简单理解为需要提交的文件修改通通放到了暂存区，等到要提交的时候，一次性提交暂存区里所有的文件到分支。
 
@@ -99,7 +99,7 @@ git reflog
 ## 添加远程库，并保持同步
 
 1. 当我们的系统之前从未使用SSH进行加密传输操作时，我们应该首先在用户主目录下创建SSH Key，因为你的本地Git 仓库和GitHub 仓库之间的传输是通过SSH 加密的。
-  ![img](http://ovas9vc9a.bkt.clouddn.com/c4330f33-1538-4ae2-bd4d-bca9ab4c8dd0.png)
+    ![img](http://ovas9vc9a.bkt.clouddn.com/c4330f33-1538-4ae2-bd4d-bca9ab4c8dd0.png)
 
 2. 在Github 上创建一个和本地仓库同名的仓库，要让本地仓库与该远程仓库关联可以使用命令：
 
@@ -110,7 +110,7 @@ git remote add origin git@server-name:path/repo-name.git
 3. 关联后，使用命令`git push -u origin master`第一次推送`master` 分支的所有内容
 
 例如：
-![img](http://ovas9vc9a.bkt.clouddn.com/f6f278e2-fda1-4021-885b-4a7ef7c9a776.png)
+![推送master分支的所有内容](learn-git/f6f278e2-fda1-4021-885b-4a7ef7c9a776.png)
 
 4. 此后，每次本地提交后，要想实现远程仓库的同步，只需使用命令`git push origin master`推送最新的修改
 
@@ -123,7 +123,7 @@ git clone git@server-name:path/repo-name.git
 ```
 
 例如:
-![img](http://ovas9vc9a.bkt.clouddn.com/533ef804-c1e6-4252-bd52-af787ccfa4a3.png)
+![从远程仓库克隆](learn-git/533ef804-c1e6-4252-bd52-af787ccfa4a3.png)
 
 ## 创建与合并分支
 
@@ -169,9 +169,9 @@ git branch -d dev //删除分支 dev
 ## 分支合并时冲突解决
 
 当我们在两个分支上对同一个文件进行修改，并且修改的内容不一样，此时合并这两个分支时就会产生冲突
-![img](http://ovas9vc9a.bkt.clouddn.com/a432bb77-8466-442e-99cd-859ba52730ee.png)
+![产生冲突](learn-git/a432bb77-8466-442e-99cd-859ba52730ee.png)
 此时查看该修改的文件时，就会发现Git用`<<<<<<<`，`=======`，`>>>>>>>`标记出不同分支的内容，此时我们需要手动修改文件，删除Git的标记，然后将修改后的文件先添加到暂存区，然后提交到分支
-![img](http://ovas9vc9a.bkt.clouddn.com/ccdf2ba4-ce17-4c54-b347-63ec55776dc7.png)
+![解决冲突](learn-git/ccdf2ba4-ce17-4c54-b347-63ec55776dc7.png)
 提交成功后使用命令：`git log --graph --pretty=oneline --abbrev-commit`可以看到分支合并图
 
 ## 分支管理策略
@@ -220,7 +220,7 @@ git checkout -b dev origin/dev
 ```
 
 这样你就可以继续在`dev`上修改，修改完之后还可以 `push dev`分支到远程库，但是如果你的小伙伴也` push `了一次到远程库，并且此时你和你的小伙伴都对同样的文件进行了修改，你现在试图推送该分支到远程库，结果出现
-![img](http://ovas9vc9a.bkt.clouddn.com/32e277ac-2e9b-4a17-bd62-d793ba27944d.png) 
+![推送失败](learn-git/32e277ac-2e9b-4a17-bd62-d793ba27944d.png) 
 推送失败，因为你的提交与你小伙伴的最新提交之间有冲突。此时根据提示我们先用`git pull `把最新的提交从 `origin/dev`抓取下来，然后在本地合并解决冲突后然后提交分支并且推送`dev`到远程库。有的时候，我们`git pull`也会失败，原因是因为没有指定本地 `dev` 分支与远程`origin/dev` 分支的链接。我们根据提示，设置链接
   设置的命令如提示:
 
@@ -313,7 +313,7 @@ git push gitee master
 ```
 
 这样一来，我们的本地库就可以同时与多个远程库同步
-![img](http://ovas9vc9a.bkt.clouddn.com/m.jpg)
+![同时与多个远程库同步](learn-git/m.jpg)
 
 ## 自定义Git
 

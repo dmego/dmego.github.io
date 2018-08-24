@@ -12,10 +12,10 @@ toc: true
 
 汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。
 
-## 抽象为数学问题 
+## 抽象为数学问题
 
 如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要求将A柱子上的圆盘移到C柱子上去，期间只有一个原则：一次只能移到一个盘子且大盘子不能在小盘子上面，求移动的步骤和移动的次数
-![抽象为数学问题](http://upload-images.jianshu.io/upload_images/4632163-2786ae9a6ef8a3f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![抽象为数学问题](hanoi/1240.jpg)
 
 
 解:
@@ -116,8 +116,8 @@ public class TowersOfHanoi {
 >（1）函数hanoi(int n,char A,char B,char C)的功能是把编号为n的圆盘借助B从A移动到 C上。
 >（2）函数move(int n ,char N ,char M)的功能是把1编号为n的圆盘从N 移到M上
 
-![图解程序运行流程](http://upload-images.jianshu.io/upload_images/4632163-80c543b7b1ddf391.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图解程序运行流程](hanoi/1241.jpg)
 
 ## 程序运行截图
 
-![程序运行截图](http://upload-images.jianshu.io/upload_images/4632163-fd664f24a7dd338a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![程序运行截图](hanoi/1242.jpg)

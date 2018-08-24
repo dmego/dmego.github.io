@@ -8,7 +8,8 @@ tags: [Fabric,区块链]
 toc: true
 ---
 <!--more -->
-<center><img src="http://ovasw3yf9.bkt.clouddn.com/blog/180515/cEFkbDKmj9.png?imageslim" width="300px" /></center>
+
+<center><img src="deploy-IBM-blockchain-marbles/cEFkbDKmj9.png" width="300px" /></center>
 
 ## 前言
 
@@ -22,9 +23,7 @@ toc: true
 - 本演示旨在帮助开发人员了解链代码的基础知识以及如何使用 Fabric 网络开发应用程序
 - 这是一个非常简单的资产转移演示。多个用户可以创建并相互转移弹珠。
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/IHG6K7fdL4.gif)
-
-
+![演示GIF](deploy-IBM-blockchain-marbles/IHG6K7fdL4.gif)
 
 ### 版本
 
@@ -41,7 +40,10 @@ toc: true
 - 所有者（字符串）
 
 我们将创建一个用户界面，它可以设置这些值并将它们存储在区块链的账本中。 弹珠实际上是一个键值对。 键为弹珠 ID，值为一个包含（上面列出的）弹珠属性的 `JSON` 字符串。 与 `cc` 的交互是通过对网络上的一个对等节点使用 `gRPC` 协议来完成的。 `gRPC` 协议的细节由一个名为 [Hyperledger Fabric Client SDK](https://www.npmjs.com/package/fabric-client) 的 SDK 处理。 请查看下图了解拓扑结构细节。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/EEAimf54Dk.png?imageslim)
+
+![拓扑结构](deploy-IBM-blockchain-marbles/EEAimf54Dk.png)
+
+
 
 #### 应用程序通信流
 
@@ -294,7 +296,7 @@ sudo ./startFabric.sh
 ```
 
 一两分钟后，命令提示符将返回,运行结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/hGLmDfj1KH.png?imageslim)
+![运行结果](deploy-IBM-blockchain-marbles/hGLmDfj1KH.png)
 
 现在运行该命令 `docker ps` 查看当前正在运行的`Docker`容器。您应该看到类似于以下内容的内容：
 
@@ -513,7 +515,8 @@ debug: Open your browser to http://localhost:3001 and login as "admin" to initia
 出现上述输出信息,则表示项目启动成功,现在你可以在浏览器中输入 `http://localhost:3001`来访问本项目,并且您不需要输入密码或更改预先填写的用户名`admin`.
 
 **注意**: 本人在使用`gulp marbles_local`命令启动项目的过程中出现了如下图的错误,有可能你在运行时也会出现这个错误:
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/Ibhalhh6Hb.png?imageslim)
+
+![错误截图](deploy-IBM-blockchain-marbles/Ibhalhh6Hb.png)
 查看 [Issues:208] (https://github.com/IBM-Blockchain/marbles/issues/208) 可以发现有人已经遇到过这种问题, 阅读后发现这个`bug`是由`fabric-sdk-node` https://jira.hyperledger.org/browse/FAB-2593 引起的， 需要将`hfc-key-store`目录复制到您的主目录`$HOME / .hfc-key-store`，然后重新配置`connection_profile_local.json`的`client.credentialStore.path`. 如果你也遇到了这个问题,可以参考如下步骤.
 
 - 先将`hfc-key-store`目录复制到您的主目录`$HOME / .hfc-key-store`:
@@ -556,30 +559,31 @@ gulp marbles_local
 
 - 开始
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/fDf4fKbgFK.png?imageslim)
+![开始](deploy-IBM-blockchain-marbles/fDf4fKbgFK.png)
+
 点击选择右边的按钮`Guided`, 通过这种方式即可以了解 Fabric 又能自定义一些设置
 
 - 第一步：检查连接配置数据
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/2hhCaGKj8j.png?imageslim)
+![第一步](deploy-IBM-blockchain-marbles/2hhCaGKj8j.png)
 
 第一步是检查你的连接配置JSON文件。 检查的文件是：`marbles/config/marbles_local.json`和``marbles/config/connection_profile_local.json`
 
 - 第二步：注册管理员
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/5ik2l3ECfl.png?imageslim)
+![第二步](deploy-IBM-blockchain-marbles/5ik2l3ECfl.png)
 
 接下来，我们尝试将您注册为贵公司的管理员。此步骤与您的证书颁发机构（CA）联系并从您的连接配置文件中提供了`enrollID`和`enrollSecret`
 
 - 第三步：查找 Chaincode
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/mcIhE0Ikig.png?imageslim)
+![第三步](deploy-IBM-blockchain-marbles/mcIhE0Ikig.png)
 
 现在我们需要在您的`channel(通道)`上找到链码。检查或修改您的连接配置文件里配置的链码名为弹珠的通道`mychannel`。
 
 - 第四步：创建资产
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/bLlHc49aE9.png?imageslim)
+![第四步](deploy-IBM-blockchain-marbles/bLlHc49aE9.png)
 
 作为一个弹珠贸易公司，您可以携带新的弹珠业主。这些弹珠业主代表您的用户群。
 这一步将创建弹珠用户并且每个用户拥有3个弹珠。
@@ -588,13 +592,13 @@ gulp marbles_local
 
 - 第五步：配置完成,点击`Enter`进入系统
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/3aKhFkg7ee.png?imageslim)
+![第五步](deploy-IBM-blockchain-marbles/3aKhFkg7ee.png)
 
 进入系统后,你可以按照本教程开头，或者下面的`Gif`动画演示的那样为一个用户创建弹珠资产,或者将一个弹珠资产转移给另一个用户;也可以删除这个弹珠资产.
 
 - 在每次点击创建,删除,交易资产时其实都是在进行调用链码操作,而且本项目还有动画进行调用链码的演示:
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/iAh9G7eF2m.gif)
+![演示GIF](deploy-IBM-blockchain-marbles/iAh9G7eF2m.gif)
 
  当然,还有更多的功能, 你可以在部署后尽情体验!
 

@@ -15,7 +15,7 @@ tags: [幻觉]
 她喜欢云的白天
 她喜欢星的黑夜
 
-<img src="/images/threeXianKou.jpg" width="500px"  high="450px" />
+<img src="third-lane/threeXianKou.jpg" width="500px"  high="450px" />
 
 在北方的第六百五十六个晚上
 雨落在第三个巷口的地方

@@ -8,9 +8,11 @@ tags: [Fabric,区块链]
 toc: true
 ---
 <!--more -->
+
 <center>
-<img src="http://ovasw3yf9.bkt.clouddn.com/blog/180515/fEAgecbB2l.png?imageslim" width="300px" />
+<img src="quick-start-hyperledger-fabric/fEAgecbB2l.png" width="300px" />
 </center>
+
 
 ## 前言
 
@@ -23,7 +25,7 @@ toc: true
 
 
 当将系统安装完成后，需要更换源，使用`desktop`版的可以直接在设置里面选择最佳服务器,如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180514/ea2fAlGB2D.png?imageslim)
+![选择最佳服务器](quick-start-hyperledger-fabric/ea2fAlGB2D.png)
 若使用的是服务器版本,则可以使用如下命令换成高速的源
 
 - 先备份原来的源文件
@@ -115,14 +117,13 @@ wegt https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz
 - 解压安装包到`/usr/local`目录下
 
 ```bash
-sudo tar -C usr/local -xzf go1.10.2.linux-amd64.tar.gz
-``` 
+sudo tar -C /usr/local -xzf go1.10.2.linux-amd64.tar.gz
+```
 
 - 编辑当前用户的环境变量
 
 ```bash
 vim ~/.profile
-
 ```
 
 添加如下内容
@@ -170,7 +171,6 @@ $ sudo apt-get remove docker docker-engine docker.io
 
 ```bash
 sudo apt-get update
-
 ```
 
 - 安装软件包以允许`apt`通过HTTPS使用远程库
@@ -215,14 +215,12 @@ $ sudo add-apt-repository \
 
 ```bash
 sudo apt-get update
-
 ```
 
 - 使用`apt`安装`docker-ce`
 
 ```bash
 sudo apt-get install docker-ce
-
 ```
 
 - 查看docker版本，测试环境配置是否成功
@@ -294,7 +292,7 @@ curl -L https://get.daocloud.io/docker/compose/releases/download/1.12.0/docker-c
 
 - 将`Docker-Compose`文件夹移动到`/usr/local/bin`目录下
 
-```bash
+​```bash
 sudo mv ~/docker-compose /usr/local/bin/docker-compose 
 ```
 
@@ -385,7 +383,7 @@ $ ./network_setup.sh up
 >5.在`CLI`启动的时候，会运行`srcipt/script.sh`文件，这个脚本文件包含了创建`Channel`,加入`Channel`，安装`Example02`,运行`Example02`等功能
 
 最后运行完成，我们会看到如下截图，说明网络启动成功了
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180514/Ijek4E05ea.png?imageslim)
+![网络启动成功](quick-start-hyperledger-fabric/Ijek4E05ea.png)
 
 ## 手动测试一下Fabric网络
 
@@ -402,36 +400,40 @@ $ docker exec -it cli bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 ```
 查询结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/1LKAbjBimb.png?imageslim)
+![查询结果](quick-start-hyperledger-fabric/1LKAbjBimb.png)
 可以看到`a`账户的余额现在是90
+
 - 运行以下命令可以查询`b`账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","b"]}'
 ```
 查询结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/m4gHE5LKcF.png?imageslim)
+![查询结果](quick-start-hyperledger-fabric/m4gHE5LKcF.png)
 可以看到`b`账户的余额现在是210
+
 - 现在将`b`账户的余额转100给`a`账户，运行如下命令
 
 ```bash
 peer chaincode invoke -o orderer.example.com:7050  --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem  -C mychannel -n mycc -c '{"Args":["invoke","b","a","100"]}'
 ```
 执行结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/Khlal55HBC.png?imageslim)
+![执行结果](quick-start-hyperledger-fabric/Khlal55HBC.png)
 可以看到执行成功了
+
 - 再次查询`a`账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 ```
 查询结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/hd8f5cdegf.png?imageslim)
+![查询结果](quick-start-hyperledger-fabric/hd8f5cdegf.png)
 可以看到`a`账户的余额现在是190,比之前多了100
+
 - 再次查询`b`账户的余额
 ```bash
 $ peer chaincode query -C mychannel -n mycc -c '{"Args":["query","b"]}'
 ```
 查询结果如下图所示
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/IEG6EHChJ4.png?imageslim)
+![查询结果](quick-start-hyperledger-fabric/IEG6EHChJ4.png)
 可以看到`b`账户的余额现在是110,比之前少了100
 
 调用链码一切正常
@@ -447,7 +449,7 @@ $ cd ~/go/src/github.com/hyperledger/fabric/examples/e2e_cli
 $ ./network_setup.sh down
 ```
 最后出现如下图说明关闭区块链网络成功
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/180515/afIigmdgDd.png?imageslim)
+![关闭区块链网络](quick-start-hyperledger-fabric/afIigmdgDd.png)
 
 ## 总结
 至此，部署以及测试`fabric`的环境已经全部完成，下一篇博客我将记录如何在此基础上部署及运行IBM官方区块链例子[marbles(弹珠资产)](https://github.com/IBM-Blockchain/marbles)

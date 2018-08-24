@@ -163,7 +163,7 @@ pv:
   leancloud:
     enable: false  # leancloud统计
     app_id: T7nCjkO4hP9tOHMW8U7hBvNU-gzGzoHsz # leancloud <AppID>
-    app_key:  FlMTpcXpsR6zy1xAB8tYXlqu # leancloud <AppKey>
+    app_key: FlMTpcXpsR6zy1xAB8tYXlqu # leancloud <AppKey>
         
 # wordcount
 postCount:

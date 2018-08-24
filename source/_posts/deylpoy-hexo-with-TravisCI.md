@@ -32,28 +32,30 @@ toc: true
 如果想要 让`travis CI` 构建完成之后自动 push 到 master 分支，则travis需要有对这个仓库进行操作的权限，此时我们就需要为Travis CI 配置Access Token（访问令牌）。<br>
 
 在GitHub上生成Access Token 的步骤是，点击头像进入设置（Settings）,r然后点击左边菜单栏最下面的`Developer settings` 选项，进入后点击左边的 `Personal access tokens` 选项，进入后点击右上角的`Generate new token` 按钮
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/G0hFA1LkK7.png?imageslim)
+
+![生成Access Token](deylpoy-hexo-with-TravisCI/G0hFA1LkK7.png)
 点击后就会来到下面的界面，先给 Token 起一个名字，然后为它设置一些权限，其中红框内的权限是必须的，其他可以随意添加。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/5G22L5hCcK.png?imageslim)
+
+![设置一些权限](deylpoy-hexo-with-TravisCI/5G22L5hCcK.png)
 点击下面的 `create token` 按钮，就会生成一个已经赋予好权限的 token 值，接下来我们Travis CI 网站的配置中。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/fldkB30k3m.png?imageslim)
+![create token](deylpoy-hexo-with-TravisCI/fldkB30k3m.png)
 
 ### 配置 Travis CI
 
 如果之前从未使用 [Travis CI](https://travis-ci.org/) 来构建项目，则我们先需要使用GitHub账号来登录网站,登录进来后，会进到如下图界面，如果底下 没有把 GitHub 仓库中的项目加载进来，可以手动点击右上角的  `Sync account` 按钮，待到同步完成后将要自动构建的项目开启。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/0IbbdiJh18.png?imageslim)
+![将要自动构建的项目开启](deylpoy-hexo-with-TravisCI/0IbbdiJh18.png)
 开启后点击设置图标就可以进行一系列的设置，如下图所示，先开启 `General` 里的两项选项：
 
 - `Build only if .travis.yml is present`:只有在`.travis.yml`文件中配置的分支改变了才构建
 - `Build branch updates`:当分支更新后开始构建
 
-然后在  `Environment Variables` 一栏里将在 GitHub 下获取的的 `Access Token` 值添加进来
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/3b875iHdi4.png?imageslim)
+然后在  `Environment Variables` 一栏里将在 GitHub 下获取的 `Access Token` 值添加进来
+![将Access Token值添加进来](deylpoy-hexo-with-TravisCI/3b875iHdi4.png)
 
 ### 添加配置文件到Hexo源码分支下
 
-上面提到的 `.travis.yml` 配置文件需要添加到hexo 源码的根目录下，因为Travis CI 在自动构建时需要获取这些配置信息，以此来完成构建任务；这些配置信息主要包括源码分支，静态文件推送分支，仓库地址等信息。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/CaBF4laGji.png?imageslim)
+上面提到的 `.travis.yml` 配置文件需要添加到hexo 源码的根目录下，因为Travis CI 在自动构建时需要获取这些配置将信息，以此来完成构建任务；这些配置信息主要包括源码分支，静态文件推送分支，仓库地址等信息。
+![添加.travis.yml 配置文件](deylpoy-hexo-with-TravisCI/CaBF4laGji.png)
 其中主要内容如下：
 
 ```yml
@@ -94,9 +96,9 @@ env:
 
 将某篇文章中的一个表格增加一行后将修改推送到hexo源码所在的`hexo`分支
 ,然后等Travis CI 构建并自动部署成功后。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/F83mk0a09k.png?imageslim)
+![自动部署成功](deylpoy-hexo-with-TravisCI/F83mk0a09k.png)
 点击博文发现表格多了一行。
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/171014/hk2hCAma3D.png?imageslim)
+![博文表格多了一行](deylpoy-hexo-with-TravisCI/hk2hCAma3D.png)
 
 ## 总结
 

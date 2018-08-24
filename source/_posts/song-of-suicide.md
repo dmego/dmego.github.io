@@ -15,7 +15,7 @@ tags: [抑郁成疾]
 一两根树枝伸过来
 肉体，水面的宝石
 
-![](/images/SongofSuicide.jpg)
+![自杀者之歌](song-of-suicide/SongofSuicide.jpg)
 
 是对半分裂的瓶子
 瓶里的水不能分裂

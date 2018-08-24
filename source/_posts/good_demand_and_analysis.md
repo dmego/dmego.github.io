@@ -52,4 +52,4 @@ toc: true
 
 ## 图示
 
-![mark](http://ovasw3yf9.bkt.clouddn.com/blog/170929/630eE0Aecg.png?imageslim)
+![图示](good_demand_and_analysis/630eE0Aecg.png)
