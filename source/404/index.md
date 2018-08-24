@@ -4,7 +4,6 @@ toc: false
 comments: false
 permalink: /404
 ---
-<!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
