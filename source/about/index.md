@@ -16,7 +16,7 @@ sidebar: custom
   address: '河北石家庄',
   education: '本科',
   github: 'https://github.com/dmego',
-  blog: 'http://dmego.me',
+  blog: 'https://dmego.me',
   email: 'dmeago@gmail.com',
   description: '后端开发，极客生活',
 
