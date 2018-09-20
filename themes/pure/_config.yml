@@ -230,10 +230,10 @@ profile:
     - 微服务
   # My Personal Works
   works:
-    name: 出发吧一起
+    出发吧一起: 
       link: https://github.com/dmego/together
-      date: 2017
-    name: 可信数字资产存储应用
+      date: 2017   
+    可信数字资产存储应用: 
       link: https://github.com/dmego/Sada
       date: 2018  
   # My Personal Projects
