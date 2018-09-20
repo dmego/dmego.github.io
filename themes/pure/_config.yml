@@ -221,7 +221,7 @@ profile:
   links:
     主页: https://i.dmego.me
     博客: https://dmego.me
-    简历: https://resume.dmego.me
+    简历: https://r.dmego.me
   # My Personal Labels
   labels:
     - 后端
@@ -229,10 +229,14 @@ profile:
     - 分布式
     - 微服务
   # My Personal Works
-  # works:
-  #   name:
-  #     link: http://www.example.com
-  #     date: 2016
+  works:
+    name: 出发吧一起
+      link: https://github.com/dmego/together
+      date: 2017
+    name: 可信数字资产存储应用
+      link: https://github.com/dmego/Sada
+      date: 2018  
   # My Personal Projects
   projects:
     dmego/together: https://github.com/dmego/together
+    dmego/Sada: https://github.com/dmego/Sada

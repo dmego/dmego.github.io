@@ -47,10 +47,10 @@ widget:
 profile: 
   follow: 关注
   skill: 技能
-  label: 个人标签
-  work: 个人作品
-  project: 个人项目
-  link: 个人链接
+  label: 标签
+  work: 作品
+  project: 项目
+  link: 链接
 insight:
   hint: 想要查找什么...
   posts: 文章
