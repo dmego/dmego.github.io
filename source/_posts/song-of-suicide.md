@@ -3,8 +3,8 @@ layout: post
 title: "自杀者之歌"
 date: 2017-06-1 4:30
 comments: true
-categories: [病]
-tags: [抑郁成疾]
+categories: [随笔]
+tags: [诗]
 ---
 <!-- more -->
 * 作者：海子

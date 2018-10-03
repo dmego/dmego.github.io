@@ -3,8 +3,8 @@ layout: post
 title: "一句人生--(待更新...)"
 date: 2017-11-12 16:27
 comments: true
-categories: [杂]
-tags: [一句人生]
+categories: [随笔]
+tags: [杂]
 ---
 <!--more-->
 ### 2017年11月12日

@@ -3,7 +3,7 @@ layout: post
 title: "软件架构师如何工作"
 date: 2018-03-08 18:31
 comments: true
-categories: [软件体系结构]
+categories: [笔记]
 tags: [阅读笔记]
 toc: true
 ---

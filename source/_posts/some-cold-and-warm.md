@@ -3,8 +3,8 @@ layout: post
 title: "有些冷暖"
 date: 2017-4-18 21:36
 comments: true
-categories: [语]
-tags: [小冥]
+categories: [随笔]
+tags: [诗]
 ---
 <!-- more -->
 <center>

@@ -3,8 +3,8 @@ layout: post
 title: "远和近"
 date: 2017-06-10 23:00
 comments: true
-categories: [病]
-tags: [幻觉]
+categories: [随笔]
+tags: [诗]
 
 ---
 <!--more-->

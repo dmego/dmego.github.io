@@ -3,7 +3,7 @@ layout: post
 title: "如何做好需求分析"
 date: 2017-09-29 22:56
 comments: true
-categories: [软件需求与分析]
+categories: [笔记]
 tags: [阅读笔记]
 toc: true
 ---

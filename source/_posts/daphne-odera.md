@@ -3,8 +3,8 @@ layout: post
 title: "七里香"
 date: 2017-08-24 9:10
 comments: true
-categories: [情]
-tags: [小诗]
+categories: [随笔]
+tags: [诗]
 ---
 <!--more-->
 

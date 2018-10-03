@@ -3,8 +3,8 @@ layout: post
 title: "第三个巷口"
 date: 2017-06-14 1:57
 comments: true
-categories: [情]
-tags: [幻觉]
+categories: [随笔]
+tags: [诗]
 ---
 <!--more -->
 * 木青子日

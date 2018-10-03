@@ -3,8 +3,8 @@ layout: post
 title: "2017秋季阅读计划"
 date: 2017-10-12 20:00
 comments: true
-categories: [软件需求与分析]
-tags: [阅读计划]
+categories: [杂记]
+tags: [计划]
 toc: true
 ---
 <!--more-->

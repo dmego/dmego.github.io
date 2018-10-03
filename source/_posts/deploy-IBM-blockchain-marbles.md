@@ -3,7 +3,7 @@ layout: post
 title: "基于ubuntu16.04部署IBM开源区块链项目-弹珠资产管理(Marbles)"
 date: 2018-05-15 22:21
 comments: true
-categories: [Hyperledger学习笔记]
+categories: [笔记]
 tags: [Fabric,区块链]
 toc: true
 ---

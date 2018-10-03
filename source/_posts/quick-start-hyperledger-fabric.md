@@ -3,7 +3,7 @@ layout: post
 title: "基于ubuntu16.04快速构建Hyperledger Fabric网络"
 date: 2018-05-14 23:56
 comments: true
-categories: [Hyperledger学习笔记]
+categories: [笔记]
 tags: [Fabric,区块链]
 toc: true
 ---

@@ -3,8 +3,8 @@ layout: post
 title: "也许"
 date: 2016-11-20 10:36
 comments: true
-categories: [杂]
-tags: [小诗]
+categories: [随笔]
+tags: [诗]
 ---
 <!--more-->
 * 舒婷

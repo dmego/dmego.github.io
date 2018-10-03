@@ -3,7 +3,7 @@ layout: post
 title: "汉诺塔的图解递归算法"
 date: 2016-10-16 01:56
 comments: true
-categories: [数据结构与算法]
+categories: [Algorithm]
 tags: [汉诺塔,递归]
 toc: true
 ---

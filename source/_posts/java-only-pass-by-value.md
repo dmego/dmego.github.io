@@ -3,8 +3,8 @@ layout: post
 title: '为什么说java中只有值传递?'
 comments: true
 date: 2018-08-27 17:59:31
-tags:
-categories: [java学习笔记]
+categories: [java]
+tags: [学习笔记]
 ---
 
 ## 前言

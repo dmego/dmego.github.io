@@ -3,8 +3,8 @@ layout: post
 title: "微信小程序：出发吧一起"
 date: 2017-12-04 13:45
 comments: true
-categories: [微信小程序]
-tags: [JS,微信小程序]
+categories: [笔记]
+tags: [微信小程序]
 toc: true
 ---
 <!--more -->
