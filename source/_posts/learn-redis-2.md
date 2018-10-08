@@ -10,7 +10,7 @@ tags: [Redis,学习笔记]
 <!--more -->
 
 <center>
-<img src="learn-redis-1\redis-white.png" width="250px" />
+<img src="learn-redis-2\redis-white.png" width="250px" />
 </center>
 
 ## Redis 中常用命令
