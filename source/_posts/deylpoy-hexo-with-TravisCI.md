@@ -4,7 +4,7 @@ title: "使用Travis CI自动部署Hexo到GitHub"
 date: 2017-10-13 17:46
 comments: true
 categories: [博客]
-tags: [hexo,CI]
+tags: [Hexo,CI]
 toc: true
 ---
 <!--more-->

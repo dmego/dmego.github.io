@@ -3,11 +3,12 @@ layout: post
 title: 'Redis系列(一):Redis的简介与安装'
 comments: true
 date: 2018-10-4 2:02:31
-categories: [dataBase]
+categories: [DataBase]
 tags: [Redis,学习笔记]
 ---
 
 <!--more -->
+
 <center>
 <img src="learn-redis-1\redis-white.png" width="250px" />
 </center>
@@ -21,9 +22,9 @@ Redis 是一个使用`ANSI C` 编写的开源、支持网络协议、基于内�
 
 主要用于数据量大，并发量高的情况下
 
-- 分布式缓存
-- 分布式 Session
-- 应用排行榜
+- 数据缓存（页面具体数据），页面缓存（商品内容，新闻内容）
+- 分布式集群中架构中的Session分离
+- 应用排行榜，在线好友列表等
 - 任务队列，例如抢购秒杀等
 
 ## Redis 的安装
@@ -81,7 +82,7 @@ cp redis.conf /usr/local/redis-6379/bin/
 
 ## Redis 的启动
 
-### 前端模式启动
+#### 前端模式启动
 
 如果在`bin`目录下直接运行 `./redis-server`将以前端模式启动,启动成功界面如下所示
 
@@ -89,7 +90,7 @@ cp redis.conf /usr/local/redis-6379/bin/
 
 这种方式启动后，我们不能关闭该窗口，关闭该窗口后 redis 服务将会停止。如果想要使用 redis 需要再开一个窗口。进入到`bin`目录，运行`./redis-cli`命令，开启一个 redis 客户端连上 redis 服务。
 
-### 后端模式启动
+#### 后端模式启动
 
 我们进入`bin`目录，先给之前拷贝过来的`redis.conf`配置文件赋予权限
 
@@ -106,7 +107,7 @@ chmod 777 redis.conf
 
 启动后可以使用`ps -aux|grep redis`命令来查看是否启动成功
 
-![](learn-redis-1\后端启动成功.png)
+![后端启动成功](learn-redis-1\后端启动成功.png)
 
 如上图所示,默认启动端口为 `6379`
 
@@ -118,11 +119,11 @@ chmod 777 redis.conf
 
 在`bin`目录下的`redis-cli`就是 redis 的客户端，执行`./redis-cli`命令将会连接到 redis 服务器。连接成功后，我们可以使用`set key1 111`来保存一个值为`111`名为`key1`的键值对。使用`get key1`命令读取`key1`的数据
 
-![](learn-redis-1\连接redis客户端.png)
+![连接redis客户端](learn-redis-1\连接redis客户端.png)
 
 
 
-### 使用Redis 可视化工具
+## 使用Redis 可视化工具
 
 如果想要在Windows、Mac 或Linux 图像界面下可视化操作 Redis ，可以使用 [Redis Desktop Manager](https://github.com/uglide/RedisDesktopManager/)，但是现在对于Windows 和 Mac 不提供下了，不过在网上还能搜到下载的链接。
 

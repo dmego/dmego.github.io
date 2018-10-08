@@ -3,8 +3,8 @@ layout: post
 title: "fastJosn使用总结"
 date: 2018-05-13 19:56
 comments: true
-categories: [java]
-tags: [json,笔记]
+categories: [Java]
+tags: [JSON,笔记]
 toc: true
 ---
 <!--more -->
