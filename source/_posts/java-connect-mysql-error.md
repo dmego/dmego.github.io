@@ -3,8 +3,8 @@ layout: post
 title: 'JDBC连接Mysql数据库出现的问题汇总'
 comments: true
 date: 2018-10-10 4:10:20
-categories: [DataBase]
-tags: [Mysql,Exception]
+categories: [Exception]
+tags: [Mysql,JDBC]
 ---
 
 <!--more -->
@@ -32,7 +32,7 @@ tags: [Mysql,Exception]
 
 #### 原因
 
-通过异常我们可以发现，新的驱动url是`com.mysql.cj.jdbc.Driver`,经过在网上查阅资料发现，从 `mysql6`开始，驱动包开始使用新的驱动url。如果使用最新的 url ，会报驱动已过时的错误。
+通过异常我们可以发现，新的驱动url是`com.mysql.cj.jdbc.Driver`,经过在网上查阅资料发现，从 `mysql6`开始，驱动包开始使用新的驱动 url。如果使用旧的 5.0 版本的驱动包，则不用驱动URL，但是如果使用旧的驱动可能会出现一些意想不到的问题。所以还是建议将驱动包升级，然后改变 驱动 URL 的值。
 
 #### 解决方法
 
