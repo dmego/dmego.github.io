@@ -41,12 +41,12 @@ Result Maps collection already contains value for BaseResultMap
 
 > For example:
 
->```
+```
    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/my_schema"
             userId="my_user" password="my_password">
         <property name="nullCatalogMeansCurrent" value=true" />
     </jdbcConnection>
->```
+```
 
 上面的英文文档翻译过来就是:
 
