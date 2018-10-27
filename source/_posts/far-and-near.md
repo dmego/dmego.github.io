@@ -11,13 +11,15 @@ tags: [诗]
 
 * 作者：顾城
 
-  <center>
-  ​     你
-  一会看我，一会看云
-    我觉得
+<center>
 
-  <img src="far-and-near/yuanhejin.jpg" width="450px" />
+你
+一会看我，一会看云
+我觉得
 
-  你看我时很远
-  你看云时很近
-  </center>
+<img src="far-and-near/yuanhejin.jpg" width="450px" />
+
+你看我时很远
+你看云时很近
+
+</center>
