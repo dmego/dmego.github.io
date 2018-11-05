@@ -33,6 +33,7 @@
     "hexo-wordcount": "^6.0.1",
     "i": "^0.3.6",
     "markdown-it-emoji": "^1.4.0",
-    "markdown-it-katex": "^2.0.3"
+    "markdown-it-katex": "^2.0.3",
+    "natives": "^1.1.6"
   }
 }
