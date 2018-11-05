@@ -5,7 +5,7 @@ date: 2018-11-4 20:26
 comments: true
 categories: [Operations Research]
 tags: [学习笔记]
-toc: true
+mathjax: true
 ---
 
 <!--more -->
