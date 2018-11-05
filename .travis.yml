@@ -3,9 +3,9 @@ language: node_js
 node_js: stable
 
 # 指定缓存模块，可选。缓存可加快编译速度。
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
     
 # S: Build Lifecycle
 install:
