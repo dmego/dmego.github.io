@@ -10,7 +10,7 @@ mathjax: true
 
 <!--more -->
 
-<center><img src="decision-making-under-uncertainty\supplyimg.png" width="200px" /></center>
+<center><img src="risk-decision-method\supplyimg.png" width="200px" /></center>
 
 ## 前言
 
@@ -224,11 +224,11 @@ private static void EOL(double[][] matrix, int row, int col){
 
 先进行 EMV 决策法计算，求得最大期望收益值
 
->
+> max $\sum_{j} p_ja_{ij}$
 
 然后求全情报期望收益，先得求收益矩阵中每行的最大值然后求期望，最后将每行最大值的期望相加，得到全情报期望收益。
 
-> $\sum_{j} p_jmax(a_{i})$ ;	$max(a_{i})$ 是 i 行的最大值
+> $\sum_{j} p_jmax(a_{i})$ ; $max(a_{i})$ 是 i 行的最大值
 
 全情报期望收益减去最大期望收益即为全情报价值 EVPI
 
@@ -322,21 +322,13 @@ private static void EVPI(double[][] matrix, int row, int col){
 
 效用概念首先是由贝努里提出的,他认为人们对其钱财的真实价值的考虑与他的钱财拥有量有对数关系。经济管理学家将效用作为指标，用它来衡量人们对某些事物的主观价值，态度，偏爱，倾向等。例如在风险情况下进行决策，决策者对风险的态度是不同的，用效用指标来量化决策者对待风险的态度，可以给每一个决策者测定他对待风险的态度的效用曲线函数。这里还有一个概率是效用曲线系数，效用曲线系数的取值范围为（0,∞）。
 
-![效用曲线函数](risk-decision-method\value.png)
+![效用曲线函数](risk-decision-method/value.png)
 
 ##### 计算步骤
 
 先建立效用曲线函数，将矩阵中的收益值装化为效用值，其中 t 为效用曲线系数，b=max{x1,x2,x3,⋯,xn} ，a=min{x1,x2,x3,⋯,xn}) ；
 
-> U(x) = $\begin{equation}
-> \left\{
-> ​             \begin{array}{lr}
-> ​             0, & x\leq a   \\
-> ​            \left (\frac{x−a}{b−a}  \right )^t, & a\leq x\leq b  \\
-> ​             1, &x\geq b
-> ​             \end{array}
-> \right.
-> \end{equation}​$
+> U(x) = $\left\{\begin{matrix} &0, & x\leq a  & \\ &(\frac{x-a}{b-a})^t, & a\leq x\leq b  \\ &1, &x\geq b \\ \end{matrix}\right.$
 
 然后计算期望效用值,结果为期望效用的最大值
 
