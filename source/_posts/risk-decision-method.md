@@ -328,7 +328,7 @@ private static void EVPI(double[][] matrix, int row, int col){
 
 先建立效用曲线函数，将矩阵中的收益值装化为效用值，其中 t 为效用曲线系数，b=max{x1,x2,x3,⋯,xn} ，a=min{x1,x2,x3,⋯,xn}) ；
 
-> U(x) = $\left\{\begin{matrix} &0, & x\leq a  & \\ &(\frac{x-a}{b-a})^t, & a\leq x\leq b  \\ &1, &x\geq b \\ \end{matrix}\right.$
+> U(x) = $\left\{\begin{matrix} &0, & x\leq a  & \\ &(\frac{x-a}{b-a})^t, & a\leq x\leq b  \\ &1, &x\geq b \end{matrix}\right.$
 
 然后计算期望效用值,结果为期望效用的最大值
 
