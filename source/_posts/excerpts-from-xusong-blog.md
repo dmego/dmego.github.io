@@ -3,8 +3,8 @@ layout: post
 title: "许嵩博文句子摘录"
 date: 2018-12-8 15:32
 comments: true
-tags: [随笔]
-categories: [杂]
+categories: [随笔]
+tags: [杂]
 ---
 
 <!--more-->
@@ -24,7 +24,7 @@ categories: [杂]
 
 
 
-> 写悲伤的歌不代表眼下刚好失恋。写明亮的歌不代表当前刚好愉悦	——[《安徒生不后悔》](http://blog.sina.com.cn/s/blog_4a90c0b80100064c.html)
+> 写悲伤的歌不代表眼下刚好失恋。写明亮的歌不代表当前刚好愉悦。	——[《安徒生不后悔》](http://blog.sina.com.cn/s/blog_4a90c0b80100064c.html)
 
 
 
@@ -40,9 +40,7 @@ categories: [杂]
 
 
 
-> 《珍惜》
->
-> - [原文链接](http://blog.sina.com.cn/s/blog_4a90c0b801000ben.html)
+> 《珍惜》  ——[原文链接](http://blog.sina.com.cn/s/blog_4a90c0b801000ben.html)
 >
 > 明明没有睡着，却在半夜撑着对你说已经一觉睡醒的人，是爱你的。
 >
@@ -75,7 +73,7 @@ categories: [杂]
 
 > 如果把活着的每一天当成生命的最后一天谨慎对待，或许时间会被用的更有价值。可是如果每个人都确切的知道自己的死期，想一下，这个世界将多么疯狂，有人抓紧时间行善，有人抓紧时间作恶。
 >
-> 生命之所以伟大，本就在于那一滴星光散去过后的下一个天明，是未知的。		——[三月星光](http://blog.sina.com.cn/s/blog_4a90c0b80100cl1b.html)
+> 生命之所以伟大，本就在于那一滴星光散去过后的下一个天明，是未知的。    ——[三月星光](http://blog.sina.com.cn/s/blog_4a90c0b80100cl1b.html)
 >
 
 
@@ -103,14 +101,11 @@ categories: [杂]
 
 
 
-> 《雨夜》
->
-> - [原文链接](http://blog.sina.com.cn/s/blog_4a90c0b80100glpa.html)
+> 《雨夜》  ——[原文链接](http://blog.sina.com.cn/s/blog_4a90c0b80100glpa.html)
 >
 > 当深夜车辆足够稀疏的时候，宽阔的道路方能显示出一些属于它自己的真相——那些在白天各式各样的倾轧之下不为人所见的。
 >
 > 夜雨把一个人彻底淋湿。但并不以一种清洁的姿态。
-
 
 
 > 人生的进阶并非是随着年龄增长就可自动完成的。四肢动脑子不动，或脑子动四肢不动，都注定只能在原地。	——[越位](http://blog.sina.com.cn/s/blog_4a90c0b80100j7id.html)
@@ -123,7 +118,6 @@ categories: [杂]
 >
 
 
-
 > 关于爱情，我他妈明明努力过。	——[三两句](http://blog.sina.com.cn/s/blog_4a90c0b80100mdsg.html)
 
 
@@ -134,12 +128,10 @@ categories: [杂]
 >
 
 
-
 > 如果你的真实让你心清目明，自得其乐，那你也不会再有心思去指责别人。
 >
 > 往远点说。人们的分别心一直都是这么重。“这是好的”、“那是坏的”，却不知自己最看不惯的可能是别人最欣赏的，自己最欣赏的可能是别人最不屑的。	——[分别心](http://blog.sina.com.cn/s/blog_4a90c0b80102dy65.html)
 >
-
 
 
 还有两篇我觉得充满哲理的文章
