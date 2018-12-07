@@ -22,7 +22,7 @@
 
 ### 效果图
 
-![效果图](http://ovasw3yf9.bkt.clouddn.com/blog/180821/4j0jjKB9F8.png?imageslim)
+![效果图](images/sshot-1.png)
 
 ### 注
 
