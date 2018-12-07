@@ -10,7 +10,7 @@ tags: [杂]
 <!--more-->
 
 <center>
-<img src="excerpts-from-xusong-blog/xuson9.jpg" width="350px" />
+<img src="excerpts-from-xusong-blog/xusong.jpg" width="350px" />
 </center>
 
 
