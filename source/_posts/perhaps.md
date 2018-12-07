@@ -7,9 +7,11 @@ categories: [随笔]
 tags: [诗]
 ---
 <!--more-->
+
 * 舒婷
 
 <center>
+
 也许我们的心
 总是没有读者
 也许路开始已错
@@ -17,7 +19,7 @@ tags: [诗]
 也许我们点起一个个灯笼
 又被大风一个个吹灭
 
-<img src="perhaps/xiaoshi-yexu.jpg" width="500px" high="450px" />
+<img src="C:/Users/Dmego/Documents/GitHub/dmego.github.io/source/_posts/perhaps/xiaoshi-yexu.jpg" width="500px" high="450px" />
 
 也许燃尽生命烛照黑暗
 身边却没有取暖之火
@@ -33,4 +35,7 @@ tags: [诗]
 也许
 由于不可抗拒的召唤
 我们没有其它选择
-</center>
+
+</center>    
+
+
