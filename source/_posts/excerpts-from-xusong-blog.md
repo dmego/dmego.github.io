@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 许嵩博文句子摘录
 comments: true
 date: 2018-12-8 15:32
