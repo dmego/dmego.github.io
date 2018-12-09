@@ -11,13 +11,12 @@ tags: [诗]
 * 作者：海子
 
 <center>
-
 伏在下午的水中
 窗帘一掀掀
 一两根树枝伸过来
 肉体，水面的宝石
 
-![自杀者之歌](song-of-suicide/SongofSuicide.jpg)
+<img src="song-of-suicide/SongofSuicide.jpg" width="500px" high="450px" />
 
 是对半分裂的瓶子
 瓶里的水不能分裂

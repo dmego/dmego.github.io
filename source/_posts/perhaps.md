@@ -19,7 +19,7 @@ tags: [诗]
 也许我们点起一个个灯笼
 又被大风一个个吹灭
 
-<img src="C:/Users/Dmego/Documents/GitHub/dmego.github.io/source/_posts/perhaps/xiaoshi-yexu.jpg" width="500px" high="450px" />
+<img src="perhaps/xiaoshi-yexu.jpg" width="500px" high="450px" />
 
 也许燃尽生命烛照黑暗
 身边却没有取暖之火
