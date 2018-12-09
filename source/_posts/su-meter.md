@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "苏米格"
-date: 2018-10-10 04:32
+date: 2013-10-10 04:32
 comments: true
 categories: [随笔]
 tags: [词]
