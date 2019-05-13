@@ -1,6 +1,9 @@
 # 指定语言环境
 language: node_js
-node_js: stable
+node_js:
+  - v11
+  - v10
+  - v8
 
 # 指定缓存模块，可选。缓存可加快编译速度。
 cache:
