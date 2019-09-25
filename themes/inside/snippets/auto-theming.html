@@ -1,0 +1,171 @@
+<div class="is-snippet">
+    <script>
+        ! function () {
+            if (window.__inside__ && __inside__.$appearance) {
+                var i = __inside__.$appearance,
+                t = {
+                    accent_color: "#607d8b",
+                    font: {
+                        code: "'Fira Code',Consolas,monospace",
+                        base: "'Josefin Sans', 'PingFang SC', 'Microsoft YaHei'",
+                        logo: "Old English Text MT",
+                        url: "//cdn.jsdelivr.net/gh/ikeq/inside-static@2.2.0/fonts.2511e3be15287e777006.css",
+                        menu: "IM Fell DW Pica SC",
+                        label: "Sarpanch"
+                    },
+                    sidebar_background: "#607d8b linear-gradient(to bottom,#607d8b 0%,#26323b 100%)"
+                },
+                a = document.querySelector('link[href^="/theme"]');
+                __inside__.$update = function (e) {
+                    if (!e) return !1;
+                    t = Object.assign(t, e),
+                    URL.revokeObjectURL(a.href),
+                    a.href = URL.createObjectURL(new Blob([i(t) +
+                        ".article-details{padding-left:1em;user-select:none}.article-details>div,.article-details>input{display:none}.article-details>div{padding-left:1em}.article-details>label{position:relative;display:block;padding-left:.5em;cursor:pointer}.article-details>label:before{position:absolute;top:.4em;left:-1em;width:1em;height:1em;border-radius:2px;border:1px solid;content:'+';text-align:center;line-height:1}.article-details>input:checked~label:before{content:'-'}.article-details>input:checked~div{display:block}.article-details-summary a,.article-details-summary a:hover{border:none!important}.article-details-summary a:after{visibility:hidden;margin-left:2px;content:'\\E906';vertical-align:middle;font-family:Icon;line-height:1}.article-details-summary:hover a:after{visibility:visible}"
+                    ], {
+                        type: "text/css"
+                    }))
+                }
+            } else __inside__ = {
+                $appearance: function () {}
+            }
+        }();
+    </script>
+</div>
+<style>
+    #palette {
+        margin: 0 1rem 3rem
+    }
+
+    #palette a {
+        display: inline-block;
+        width: 11.111111%;
+        height: 1.5rem;
+        color: #fff;
+        vertical-align: bottom;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: .5em;
+        line-height: 1.6rem;
+        transition: transform .15s
+    }
+
+    #palette a.current,
+    #palette a:hover {
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+        transform: scale(1.1)
+    }
+
+    #palette a:nth-child(1) {
+        border-radius: 6px 0 0 0
+    }
+
+    #palette a:nth-child(4) {
+        border-radius: 0 6px 0 0
+    }
+
+    #palette a:nth-child(18) {
+        border-radius: 0 0 0 6px
+    }
+
+    #palette a:last-child {
+        border-radius: 0 0 6px 0
+    }
+</style>
+<div id="palette"></div>
+<div class="is-snippet">
+    <script>
+        ! function () {
+            var t = [
+                    ["#2a2b33", "#2a2b33 url(//cdn.jsdelivr.net/gh/ikeq/inside-static@assets/shattered-island.jpg)"],
+                    ["#e84701", "#e84701 url(//cdn.jsdelivr.net/gh/ikeq/inside-static@assets/hodgepodge.jpg)"],
+                    ["#ff76ab", "#ff76ab linear-gradient(to bottom,#ff76ab 0%,#ff5640 100%)"],
+                    ["#95b400", "#95b400 url(//cdn.jsdelivr.net/gh/ikeq/inside-static@assets/green-goblin.jpg)"],
+                    ["#1a1a1a", "#1a1a1a url(//cdn.jsdelivr.net/gh/ikeq/inside-static@assets/ocean.jpg)"]
+                ].map(function (e) {
+                    return {
+                        accent_color: e[0],
+                        sidebar_background: e[1]
+                    }
+                }).concat(
+                    "f44336 e91e63 9c27b0 673ab7 3f51b5 2196f3 03a9f4 00bcd4 009688 4caf50 8bc34a ffc107 ff9800 ff5722 795548 9e9e9e 607d8b 2a2b33"
+                    .split(" ").map(function (e) {
+                        return {
+                            accent_color: "#" + e,
+                            sidebar_background: "#" + e
+                        }
+                    })),
+            a = document.getElementById("palette"),
+            n = {};
+            t.unshift({
+                background: "#e2d3b6 url(//www.toptal.com/designers/subtlepatterns/patterns/vintage-concrete.png)",
+                sidebar_background: "#e2d3b6 url(//www.toptal.com/designers/subtlepatterns/patterns/vintage-concrete.png)",
+                card_background: "url(//www.toptal.com/designers/subtlepatterns/patterns/paper.png)",
+                foreground_color: "#363636",
+                border_color: "#fff",
+                highlight: ['#ffffff', '#e0e0e0', '#c5c8c6', '#b4b7b4',
+                            '#969896', '#373b41', '#282a2e', '#1d1f21',
+                            '#cc342b', '#f96a38', '#fba922', '#198844',
+                            '#3971ed', '#3971ed', '#a36ac7', '#3971ed'
+                ],
+                _label: "paper",
+                _style: "color:#000",
+                _color: ["#e2d3b6", "#e2d3b6"]
+            }), t.unshift({
+                foreground_color: "#363636",
+                border_color: "#e0e0e0",
+                background: "url(circuit.png) repeat-x #f5f7fa",
+                sidebar_background: "#607d8b linear-gradient(to bottom,#607d8b 0%,#26323b 100%)",
+                card_background: "#fff",
+                highlight: ['#ffffff', '#e0e0e0', '#c5c8c6', '#b4b7b4',
+                            '#969896', '#373b41', '#282a2e', '#1d1f21',
+                            '#cc342b', '#f96a38', '#fba922', '#198844',
+                            '#3971ed', '#3971ed', '#a36ac7', '#3971ed'
+                ],
+                _label: "sun 🌞",
+                _style: "background:#fff;color:#000",
+                _color: ["#607d8b", "#f3f6f7"]
+            });
+            t.unshift({
+                foreground_color: "#d8d8d8",
+                border_color: "#444",
+                background: "#202020",
+                sidebar_background: "#262626",
+                card_background: "#252525",
+                highlight: ['#1d1f21', '#282a2e', '#373b41', '#969896',
+                            '#b4b7b4', '#c5c8c6', '#e0e0e0', '#ffffff',
+                            '#cc342b', '#f96a38', '#fba922', '#198844',
+                            '#3971ed', '#3971ed', '#a36ac7', '#3971ed'
+                ],
+                _label: "moon 🌝",
+                _style: "color:#fff",
+                _color: ["#262626", "#202020"]
+            }), a.innerHTML = t.map(function (e, a) {
+                var r = void 0,
+                    t = "";
+                e.background || e.sidebar_background ? r = e.sidebar_background || e.background : e
+                    .accent_color && (r = e.accent_color), (e.background && /(url|linear)/.test(e.background) ||
+                        e.sidebar_background && /(url|linear)/.test(e.sidebar_background) || e._label) && (t =
+                        ";width:25%;"), e._style && (t += e._style);
+                var n = Object.assign({}, e);
+                for (var o in n) "_" === o[0] && delete n[o];
+                return '<a style="background:' + (r + t) + "\" title='" + JSON.stringify(n, null, 2) +
+                    "' data-i=\"" + a + '">' + (e._label || "") + "</a>"
+            }).join(""), setTimeout(function () {
+                var e = document.createEvent("Event");
+                e.initEvent("resize", !0, !0), window.dispatchEvent(e), n = document.querySelector(
+                    'meta[name="theme-color"]') || {};
+                (new Date).getHours();
+                a.addEventListener("click", function (e) {
+                    var a = e.target;
+                    if ("A" === a.tagName) {
+                        var r = t[a.dataset.i];
+                        __inside__.$update(r), 
+                        r._color ? __inside__.color = r._color : r.accent_color && (__inside__.color = [r.accent_color]), 
+                        n.content = __inside__.color[0]
+                    }
+                })
+            }, 100)
+        }();
+    </script>
+</div>

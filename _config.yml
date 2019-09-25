@@ -3,11 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dmego`Blog
+title: Dmego`s Blog
 subtitle: Code create life
 description: 木夏子上 青日未央
-author: 木青子日 
-language: zh-CN
+keywords:
+author: Dmego
+language: en
 timezone: 
 
 # URL
@@ -110,13 +111,15 @@ baidusitemap:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: pure
+theme: inside
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  github: git@github.com:dmego/dmego.github.io.git,master
+  github: git@github.com:dmego/dmego.github.io.git
+  branch: master
+  message: update blogs
 
 # Config for hexo-generator-markdown-it-plus
 markdown_it_plus:
@@ -135,20 +138,3 @@ markdown_it_plus:
     - plugin:
         name: markdown-it-mark
         enable: false
-
-# hexo-neat
-neat_enable: true
-neat_html:
-  enable: true
-  exclude:  
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - '*.min.js'

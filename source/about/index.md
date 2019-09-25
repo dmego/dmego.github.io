@@ -1,20 +1,17 @@
 ---
-title: 关于
-description: The depth of thinking determines your altitude
-layout: about
-comments: false
-sidebar: custom
+title: About Me
+toc: false
+reward: false
+copyright: false
 ---
 
 ```js
 {
   name: 'Dmego'
-  age: 21,
-  gender: '男',
+  age: 22,
+  gender: 'Boy',
   profession: 'Backend Developer & Geek',
-  experience: '应届生',
-  address: '河北石家庄',
-  education: '本科',
+  address: 'Beijing',
   github: 'https://github.com/dmego',
   blog: 'https://dmego.me',
   email: 'dmeago@gmail.com',
