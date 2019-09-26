@@ -20,13 +20,13 @@ install:
 # 执行清缓存，生成网页操作
 script:
   - hexo clean
-  - hexo g && gulp
+  - hexo g 
 
 after_script:
   - cd ./public
   - git init
   - git config user.name "dmego"
-  - git config user.email "zengkai12138@outlook.com" 
+  - git config user.email "dmeago@gmail.com" 
   - git add .
   - git commit -m "Update Blog"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
