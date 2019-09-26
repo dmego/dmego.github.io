@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "基于ubuntu16.04快速构建Hyperledger Fabric网络"
+title: 基于ubuntu16.04快速构建Hyperledger Fabric网络
 date: 2018-05-14 23:56
-comments: true
-categories: [笔记]
-tags: [Fabric,区块链]
-toc: true
+author: Dmego
+categories:
+- 技术
+tags: 
+- Hyperledger Fabric
+
 ---
 <!--more -->
 

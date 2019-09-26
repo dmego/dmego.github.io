@@ -1,16 +1,15 @@
 ---
-layout: post
-title: "基于ubuntu16.04部署IBM开源区块链项目-弹珠资产管理(Marbles)"
+title: 基于ubuntu16.04部署IBM开源区块链项目-弹珠资产管理(Marbles)
 date: 2018-05-15 22:21
-comments: true
-categories: [笔记]
-tags: [Fabric,区块链]
-toc: true
+author: Dmego
+categories:
+- 技术
+tags:
+- Hyperledger Fabric
 ---
 <!--more -->
 
 <center><img src="deploy-IBM-blockchain-marbles/cEFkbDKmj9.png" width="300px" /></center>
-
 ## 前言
 
 本教程基本上是对`Marbles`项目的翻译过程. 如果英文比较好的话，建议根据[官方操作说明](https://github.com/IBM-Blockchain/marbles/blob/master/README.md),一步步进行环境部署。当然你也可以参考本教程在自己的主机上部署该项目。

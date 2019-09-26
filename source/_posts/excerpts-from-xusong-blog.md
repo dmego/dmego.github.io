@@ -1,10 +1,11 @@
 ---
-layout: post
-title: "许嵩博文句子摘录"
+title: 许嵩博文句子摘录
 date: 2018-12-8 15:32
-comments: true
-categories: [随笔]
-tags: [杂]
+author: Dmego
+categories: 
+- 新知
+tags: 
+- 杂
 ---
 
 <!--more-->

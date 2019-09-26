@@ -1,17 +1,17 @@
 ---
-layout: post
-title: "决策模型(二)：风险决策法"
+title: 决策模型(二)：风险决策法
 date: 2018-11-11 24:00
-comments: true
-categories: [Operations Research]
-tags: [学习笔记]
+author: Dmego
+categories:
+- 技术
+tags:
+- Operations Research
 mathjax: true
 ---
 
 <!--more -->
 
 <center><img src="risk-decision-method\supplyimg.png" width="200px" /></center>
-
 ## 前言
 
 风险决策法是指决策者对客观情况不了解，但是对将发生各事件的概率是已知的。决策者往往通过调查，根据过去的经验或主观估计等途径获得这些概率。在风险决策中一般采用期望值作为决策准则，常用的有最大期望收益决策准则（EMV）和最小机会损失决策准则（EOL）。

@@ -1,13 +1,15 @@
 ---
-layout: post
-title: "fastJosn使用总结"
+title: fastJosn使用总结
 date: 2018-05-13 19:56
-comments: true
-categories: [Java]
-tags: [JSON,笔记]
-toc: true
+author: Dmego
+categories:
+- 技术
+tags:
+- Java
+- JSON
 ---
 <!--more -->
+
 <center>
 <img src="using-fastjson/cE7H2aLhmC.jpg" width="250px" />
 </center>
@@ -52,8 +54,8 @@ Model model = JSON.parseObject(jsonStr, Model.class);
 
 ### 有关类库的一些说明
 
-- JSONArray : 相当于List<Object>
-- JSONObject: 相当于Map<String,Object>
+- JSONArray : 相当于 `List<Object>`
+- JSONObject: 相当于 `Map<String,Object>`
 
 
 ## fastjson 使用实例

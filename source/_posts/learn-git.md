@@ -1,14 +1,14 @@
 ---
-layout: post
-title: "Git学习笔记"
+title: Git学习笔记
 date: 2017-08-26 10:36
-comments: true
-categories: [Git]
-tags: [学习笔记]
-toc: true
+author: Dmego
+categories:
+- 技术
+tags:
+- Git
+thumbnail: '2017/08/26/learn-git/2017-08-27_035118.jpg #111'
 ---
 <!--more-->
-![Git](learn-git/2017-08-27_035118.jpg)
 
 ## 前言
 
@@ -42,7 +42,7 @@ git status:查看当前Git仓库的状态，是否有文件没有提交，让我
 git diff: 查看不同，当修改文件后，可以查看修改了什么内容（只适用于文本文件）
 ```
 
-![img](http://ovas9vc9a.bkt.clouddn.com/11113c.png)
+![img](learn-git/4632163-5faa5c85dd81fd28.jpg)
 
 ## 实现版本之间回退
 
@@ -65,7 +65,7 @@ git reset --hard 81ac3c5
 git reflog
 ```
 
-![img](http://ovas9vc9a.bkt.clouddn.com/54bef601-1354-4439-b2fa-3a416a9a0e58.png)
+![](learn-git/4632163-0473a545930db837.png)
 
 ## 工作区与暂存区的概念
 
@@ -99,8 +99,7 @@ git reflog
 ## 添加远程库，并保持同步
 
 1. 当我们的系统之前从未使用SSH进行加密传输操作时，我们应该首先在用户主目录下创建SSH Key，因为你的本地Git 仓库和GitHub 仓库之间的传输是通过SSH 加密的。
-    ![img](http://ovas9vc9a.bkt.clouddn.com/c4330f33-1538-4ae2-bd4d-bca9ab4c8dd0.png)
-
+    <img src="learn-git/4632163-1a70baf9a3d42d1a.png"/>
 2. 在Github 上创建一个和本地仓库同名的仓库，要让本地仓库与该远程仓库关联可以使用命令：
 
 ```bash
@@ -163,7 +162,7 @@ git checkout master //首先切换到master分支git merge dev //合并指定分
 git branch -d dev //删除分支 dev
 ```
 
-![img](http://ovas9vc9a.bkt.clouddn.com/31ee3b6d-f1a8-446b-a80b-5d674c018591.png)
+![img](learn-git/4632163-07512ebdf2fb68f8.png)
 
 
 ## 分支合并时冲突解决
@@ -182,7 +181,7 @@ git branch -d dev //删除分支 dev
 git merge --no-ff -m 'merge with no-ff' dev //因为本次合并会生成一个commit ，所以需要加上 -m 参数说明
 ```
 
-![img](http://ovas9vc9a.bkt.clouddn.com/6646c24c-28fb-438b-a683-c3d8febd3be3.png)
+![img](learn-git/4632163-58566aa88623b38b.png)
 
 ## 保存现场，修复bug后恢复
 
@@ -229,7 +228,7 @@ git branch --set-upstream-to=origin/dev
 ```
 
 此时就可以`git pull` 了，但是在本地合并时还会有冲突，此时我们通过手动解决冲突后然后推送到远程库。
-![img](http://ovas9vc9a.bkt.clouddn.com/ccd6447e-dfe5-4bad-a37f-a9c087187ee2.png)
+![img](learn-git/4632163-586cd65342210d70.png)
 
 **小结**：
 
@@ -251,7 +250,7 @@ git tag <tagname> <commit id>
 如：git tag v1.0 ew326gd | git tag v 1.0 HEAD@{1}
 ```
 
-![img](http://ovas9vc9a.bkt.clouddn.com/c69682ce-7885-4f36-82ae-abfd42deec28.png)
+![img](learn-git/4632163-2650f50b0aef58bd.png)
 
 *注:    标签不是按时间顺序列出，而是按字母排序的。可以用`git show <tagname>`查看标签信息*
 
@@ -354,6 +353,6 @@ git config --global alias.st status
 每个仓库的配置文件都放在`.git/config` 文件中，其中别名就在 `[alias]` 后面，要想删除别名直接把对应的那行删除就行了
 而每个用户的配置文件放在用户主目录下的一个隐藏文件`.gitconfig`中。其中别名就在 `[alias]`后面，要想删除别名直接把对应的那行删除就行了。
 
-## 搭建Git服务器 
+## 搭建Git服务器
 
 教程地址：[廖雪峰GIt教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137583770360579bc4b458f044ce7afed3df579123eca000)

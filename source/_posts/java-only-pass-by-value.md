@@ -1,10 +1,11 @@
 ---
-layout: post
-title: '为什么说java中只有值传递?'
-comments: true
+title: 为什么说java中只有值传递
+author: Dmego
 date: 2018-08-27 17:59:31
-categories: [Java]
-tags: [学习笔记]
+categories:
+- 技术
+tags:
+- Java
 ---
 
 ## 前言
@@ -72,7 +73,7 @@ public class TestValue {
 
 ## 结果分析
 
-![堆与内存分析](java-only-pass-by-value/changeValue.jpg)
+![堆与内存分析](java-only-pass-by-value/changeValue.png)
 
 下面我们以上图为辅助，来分析这段程序，首先我们定义了一个`User`类，然后在测试类中实例化了一个`User`对象，名为`user1`，并且为其赋值`name = '张三'`，此时在内存中如`图1`所示，实例化一个对象相当于在堆中开辟了一块内存，内存地址为`017`，此时这个对象的引用为`user1`,内存地址为`001`,它保存了该对象在内存中的地址，也就是指向了该对象。接下了，我们调用方法`change()`，来尝试改变`user1`的`name`值以此验证`java`中的传值方式。
 

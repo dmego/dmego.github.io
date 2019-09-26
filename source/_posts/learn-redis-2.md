@@ -1,10 +1,11 @@
 ---
-layout: post
-title: 'Redis系列(二):Redis的数据类型及命令操作'
-comments: true
+title: Redis系列(二):Redis的数据类型及命令操作
+author: Dmego
 date: 2018-10-5 15:30:11
-categories: [DataBase]
-tags: [Redis,学习笔记]
+categories:
+- 技术
+tags: 
+- Redis
 ---
 
 <!--more -->
@@ -118,7 +119,7 @@ OK
 
  hash 叫散列类型。等价于Java 中的 HashMap。但是在 redis 中 hash 的 key 必须是 string 类型。不支持其他类型。这个特性非常适合存储对象。因为一个对象可以有很多属性，存储起来就是键值对形式的。在 Reids 中，每个 Hash 可以存储多达 4 亿个键值对。
 
-![图示](learn-redis-2\hash.png)
+![图示](learn-redis-2/hash.png)
 
 #### 相关操作命令
 
@@ -240,7 +241,7 @@ redis 中的 set 类型和 java 中的 HashSet 类似，其底层都是用HashMa
 
 ##### 集合的并集运算 A ∪ B
 
-![并集](learn-redis-2\buji.png)
+![并集](learn-redis-2/buji.png)
 
 
 
@@ -259,7 +260,7 @@ redis 中的 set 类型和 java 中的 HashSet 类似，其底层都是用HashMa
 
 ##### 集合的交集运算 A ∩ B
 
-![交集](learn-redis-2\jiaoji.png)
+![交集](learn-redis-2/jiaoji.png)
 
 ```bash
 127.0.0.1:6379> sadd seta 1 2 3
@@ -272,7 +273,7 @@ redis 中的 set 类型和 java 中的 HashSet 类似，其底层都是用HashMa
 
 ##### 集合的差集运算 A - B
 
-![差集](learn-redis-2\caji.png)
+![差集](learn-redis-2/caji.png)
 
 ```bash
 127.0.0.1:6379> sadd seta 1 2 3

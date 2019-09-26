@@ -1,10 +1,11 @@
 ---
-layout: post
-title: 'JDBC连接Mysql数据库出现的问题汇总'
-comments: true
+title: JDBC连接Mysql数据库出现的问题汇总
+author: Dmego
 date: 2018-10-10 4:10:20
-categories: [Exception]
-tags: [Mysql,JDBC]
+categories:
+- 技术
+tags:
+- Mysql
 ---
 
 <!--more -->

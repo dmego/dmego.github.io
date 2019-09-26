@@ -1,10 +1,11 @@
 ---
-layout: post
-title: 'Mybatis 逆向工程中使用 Mysql 8.0 版本驱动遇到的问题'
-comments: true
+title: Mybatis 逆向工程中使用 Mysql 8.0 版本驱动遇到的问题
+author: Dmego
 date: 2018-10-10 6:49:00
-categories: [Exception]
-tags: [Mybatis]
+categories:
+- 技术
+tags:
+- Mybatis
 ---
 
 <!--more -->

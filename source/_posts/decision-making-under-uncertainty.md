@@ -1,16 +1,17 @@
 ---
-layout: post
-title: "决策模型(一)：不确定型决策法"
+title: 决策模型(一)：不确定型决策法
 date: 2018-11-4 20:26
-comments: true
-categories: [Operations Research]
-tags: [学习笔记]
+author: Dmego
+categories:
+- 技术 
+tags:
+- Operations Research
 mathjax: true
 ---
 
 <!--more -->
 
-<center><img src="decision-making-under-uncertainty\supplyimg.png" width="200px" /></center>
+<center><img src="decision-making-under-uncertainty/supplyimg.png" width="200px" /></center>
 
 ## 前言
 

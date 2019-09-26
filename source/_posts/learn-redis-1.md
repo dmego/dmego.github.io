@@ -1,10 +1,11 @@
 ---
-layout: post
-title: 'Redis系列(一):Redis的简介与安装'
-comments: true
+title: Redis系列(一):Redis的简介与安装
+author: Dmego
 date: 2018-10-4 2:02:31
-categories: [DataBase]
-tags: [Redis,学习笔记]
+categories:
+- 技术
+tags: 
+- Redis
 ---
 
 <!--more -->
