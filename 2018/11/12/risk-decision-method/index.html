@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<title>决策模型(二)：风险决策法 - Dmego`s Blog</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://dmego.me/2018/11/12/risk-decision-method/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="## 前言 风险决策法是指决策者对客观情况不了解，但是对将发生各事件的概率是已知的。决策者往往通过调查，根据过去的经验或主观估计等途径获得这些概率。在风险决策中一般采用期望值作为决策准则，常用的有最大期望收益决策准则（EMV）和最小机会损失决策准则（EOL）。 风险型决策问题一般具有以下特点:  决策具有明确目标: 获得最大收益（利润）或最小损失； 存在两个以上可供选择的行动方案 存在两个或两">
+<meta name="keywords" content="Operations Research">
+<meta property="og:type" content="website">
+<meta property="og:title" content="决策模型(二)：风险决策法">
+<meta property="og:url" content="https://dmego.me/2018/11/12/risk-decision-method/index.html">
+<meta property="og:site_name" content="Dmego`s Blog">
+<meta property="og:description" content="## 前言 风险决策法是指决策者对客观情况不了解，但是对将发生各事件的概率是已知的。决策者往往通过调查，根据过去的经验或主观估计等途径获得这些概率。在风险决策中一般采用期望值作为决策准则，常用的有最大期望收益决策准则（EMV）和最小机会损失决策准则（EOL）。 风险型决策问题一般具有以下特点:  决策具有明确目标: 获得最大收益（利润）或最小损失； 存在两个以上可供选择的行动方案 存在两个或两">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<meta property="og:updated_time" content="2019-12-22T18:21:32.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="决策模型(二)：风险决策法">
+<meta name="twitter:description" content="## 前言 风险决策法是指决策者对客观情况不了解，但是对将发生各事件的概率是已知的。决策者往往通过调查，根据过去的经验或主观估计等途径获得这些概率。在风险决策中一般采用期望值作为决策准则，常用的有最大期望收益决策准则（EMV）和最小机会损失决策准则（EOL）。 风险型决策问题一般具有以下特点:  决策具有明确目标: 获得最大收益（利润）或最小损失； 存在两个以上可供选择的行动方案 存在两个或两">
+<meta name="twitter:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"url":"https://dmego.me","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","description":"木夏子上 青日未央","author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"技术","url":"https://dmego.me/2018/11/12/risk-decision-method.html","headline":"决策模型(二)：风险决策法","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","datePublished":"2018-11-12T00:00:00.000Z","dateModified":"2019-12-22T18:21:32.545Z","keywords":"Operations Research","description":"木夏子上 青日未央","publisher":{"@type":"Organization","name":"Dmego`s Blog","logo":{"@type":"ImageObject","url":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"}},"author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dmego.me/2018/11/12/risk-decision-method.html"}}]</script>
+<link rel="alternate" type="application/atom+xml" title="Dmego`s Blog" href="/atom.xml">
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" rel="stylesheet">
+<link href="/styles.e987407a0a9d77c7ba00.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.8f2de6161234f935c5cf.css">
+<script src="/config.e72acf18e249afd42517.js"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-130413112-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-130413112-1');</script></head>
+<body lang="en">
+<is-a></is-a>
+<script src="/theme.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/runtime.caef73fae70e33459c5a.js"></script>
+<script src="/polyfills.28555e618578fe61f50a.js"></script>
+<script src="/main.3c8fe2175e9d028e033b.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<title>决策模型(一)：不确定型决策法 - Dmego`s Blog</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://dmego.me/2018/11/04/decision-making-under-uncertainty/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="前言 所谓的不确定型的决策是指决策者对环境情况一无所知。这时决策者是根据自己的主观倾向进行决策，由决策者的主观态度的不同基本可分为四种准则：悲观主义决策准则、乐观主义决策准则、等可能性准则、最小机会损失决策准则。下面将以一个例子来说明这几种决策准则。  设某工厂是按批生产某产品并按批销售，每件产品的成本为30元，批发价为每件35元，若每月生产的产品当月销售不完，则每件损失1元。工厂每投产一批">
+<meta name="keywords" content="Operations Research">
+<meta property="og:type" content="website">
+<meta property="og:title" content="决策模型(一)：不确定型决策法">
+<meta property="og:url" content="https://dmego.me/2018/11/04/decision-making-under-uncertainty/index.html">
+<meta property="og:site_name" content="Dmego`s Blog">
+<meta property="og:description" content="前言 所谓的不确定型的决策是指决策者对环境情况一无所知。这时决策者是根据自己的主观倾向进行决策，由决策者的主观态度的不同基本可分为四种准则：悲观主义决策准则、乐观主义决策准则、等可能性准则、最小机会损失决策准则。下面将以一个例子来说明这几种决策准则。  设某工厂是按批生产某产品并按批销售，每件产品的成本为30元，批发价为每件35元，若每月生产的产品当月销售不完，则每件损失1元。工厂每投产一批">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<meta property="og:updated_time" content="2019-12-22T18:21:32.505Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="决策模型(一)：不确定型决策法">
+<meta name="twitter:description" content="前言 所谓的不确定型的决策是指决策者对环境情况一无所知。这时决策者是根据自己的主观倾向进行决策，由决策者的主观态度的不同基本可分为四种准则：悲观主义决策准则、乐观主义决策准则、等可能性准则、最小机会损失决策准则。下面将以一个例子来说明这几种决策准则。  设某工厂是按批生产某产品并按批销售，每件产品的成本为30元，批发价为每件35元，若每月生产的产品当月销售不完，则每件损失1元。工厂每投产一批">
+<meta name="twitter:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"url":"https://dmego.me","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","description":"木夏子上 青日未央","author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"技术","url":"https://dmego.me/2018/11/04/decision-making-under-uncertainty.html","headline":"决策模型(一)：不确定型决策法","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","datePublished":"2018-11-04T20:26:00.000Z","dateModified":"2019-12-22T18:21:32.505Z","keywords":"Operations Research","description":"木夏子上 青日未央","publisher":{"@type":"Organization","name":"Dmego`s Blog","logo":{"@type":"ImageObject","url":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"}},"author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dmego.me/2018/11/04/decision-making-under-uncertainty.html"}}]</script>
+<link rel="alternate" type="application/atom+xml" title="Dmego`s Blog" href="/atom.xml">
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" rel="stylesheet">
+<link href="/styles.e987407a0a9d77c7ba00.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.8f2de6161234f935c5cf.css">
+<script src="/config.e72acf18e249afd42517.js"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-130413112-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-130413112-1');</script></head>
+<body lang="en">
+<is-a></is-a>
+<script src="/theme.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/runtime.caef73fae70e33459c5a.js"></script>
+<script src="/polyfills.28555e618578fe61f50a.js"></script>
+<script src="/main.3c8fe2175e9d028e033b.js"></script>
+</body>
+</html>

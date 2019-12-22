@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<title>汉诺塔的图解递归算法 - Dmego`s Blog</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="https://dmego.me/2016/10/16/hanoi/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="起源 汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。  抽象为数学问题 如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="website">
+<meta property="og:title" content="汉诺塔的图解递归算法">
+<meta property="og:url" content="https://dmego.me/2016/10/16/hanoi/index.html">
+<meta property="og:site_name" content="Dmego`s Blog">
+<meta property="og:description" content="起源 汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。  抽象为数学问题 如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<meta property="og:updated_time" content="2019-12-22T18:21:32.529Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="汉诺塔的图解递归算法">
+<meta name="twitter:description" content="起源 汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。  抽象为数学问题 如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要">
+<meta name="twitter:image" content="https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160">
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"url":"https://dmego.me","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","description":"木夏子上 青日未央","author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"技术","url":"https://dmego.me/2016/10/16/hanoi.html","headline":"汉诺塔的图解递归算法","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160","datePublished":"2016-10-16T01:56:00.000Z","dateModified":"2019-12-22T18:21:32.529Z","keywords":"算法","description":"木夏子上 青日未央","publisher":{"@type":"Organization","name":"Dmego`s Blog","logo":{"@type":"ImageObject","url":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"}},"author":{"@type":"Person","name":"Dmego","description":"The depth of thinking determines your altitude.","image":"https://en.gravatar.com/userimage/143522087/3130fed41e3ad43bbe6bd86b1e028f21?size=160"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dmego.me/2016/10/16/hanoi.html"}}]</script>
+<link rel="alternate" type="application/atom+xml" title="Dmego`s Blog" href="/atom.xml">
+<link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
+<link href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" rel="stylesheet">
+<link href="/styles.e987407a0a9d77c7ba00.css" rel="stylesheet">
+<link rel="stylesheet" href="/theme.8f2de6161234f935c5cf.css">
+<script src="/config.e72acf18e249afd42517.js"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-130413112-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-130413112-1');</script></head>
+<body lang="en">
+<is-a></is-a>
+<script src="/theme.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/runtime.caef73fae70e33459c5a.js"></script>
+<script src="/polyfills.28555e618578fe61f50a.js"></script>
+<script src="/main.3c8fe2175e9d028e033b.js"></script>
+</body>
+</html>

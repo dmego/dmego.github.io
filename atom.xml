@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Dmego`s Blog</title>
+  
+  <subtitle>Code create life</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://dmego.me/"/>
+  <updated>2019-12-22T18:21:32.533Z</updated>
+  <id>https://dmego.me/</id>
+  
+  <author>
+    <name>Dmego</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将WSL2作为生产力工具</title>
+    <link href="https://dmego.me/2019/12/21/make-wsl2-as-a-productivity-tool.html"/>
+    <id>https://dmego.me/2019/12/21/make-wsl2-as-a-productivity-tool.html</id>
+    <published>2019-12-21T19:46:00.000Z</published>
+    <updated>2019-12-22T18:21:32.533Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;适用于 &lt;code&gt;Linux&lt;/code&gt; 的 &lt;code&gt;Windows&lt;/code&gt; 子系统 (&lt;code&gt;WSL&lt;/code&gt;) 是 &lt;code&gt;Windows 10&lt;/code&gt;新增的功能，使用它可以直接在 &lt;code&gt;Windows&lt;/code&gt; 上运行 &lt;code&gt;Linux&lt;/code&gt; 命令。而&lt;code&gt;WSL 2&lt;/code&gt; 是&lt;code&gt;WSL&lt;/code&gt;的一个新版本，它支持适用于 &lt;code&gt;Linux&lt;/code&gt; 的 &lt;code&gt;Windows&lt;/code&gt; 子系统在 &lt;code&gt;Windows&lt;/code&gt; 上运行 &lt;code&gt;ELF64 Linux&lt;/code&gt; 二进制文件。 它的主要目标是提高文件系统的性能，并增加系统调用的完全兼容性。&lt;code&gt;WSL 2&lt;/code&gt; 使用最新和最高的虚拟化技术在轻型实用程序虚拟机（&lt;code&gt;VM&lt;/code&gt;）内部运行 &lt;code&gt;Linux&lt;/code&gt; 内核。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="WSL2" scheme="https://dmego.me/tags/WSL2/"/>
+    
+      <category term="Docker" scheme="https://dmego.me/tags/Docker/"/>
+    
+      <category term="Kubernetes" scheme="https://dmego.me/tags/Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>许嵩博文句子摘录</title>
+    <link href="https://dmego.me/2018/12/08/excerpts-from-xusong-blog.html"/>
+    <id>https://dmego.me/2018/12/08/excerpts-from-xusong-blog.html</id>
+    <published>2018-12-08T15:32:00.000Z</published>
+    <updated>2019-12-22T18:21:32.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/12/08/excerpts-from-xusong-blog/xusong.jpg&quot; width=&quot;350px&quot;&gt;
+&lt;/center&gt;
+&lt;p&gt;摘录了一些&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="新知" scheme="https://dmego.me/categories/%E6%96%B0%E7%9F%A5/"/>
+    
+    
+      <category term="杂" scheme="https://dmego.me/tags/%E6%9D%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>决策模型(二)：风险决策法</title>
+    <link href="https://dmego.me/2018/11/12/risk-decision-method.html"/>
+    <id>https://dmego.me/2018/11/12/risk-decision-method.html</id>
+    <published>2018-11-12T00:00:00.000Z</published>
+    <updated>2019-12-22T18:21:32.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;&lt;img src=&quot;/2018/11/12/risk-decision-method/supplyimg.png&quot; width=&quot;200px&quot;&gt;&lt;/center&gt;
+##
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Operations Research" scheme="https://dmego.me/tags/Operations-Research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>决策模型(一)：不确定型决策法</title>
+    <link href="https://dmego.me/2018/11/04/decision-making-under-uncertainty.html"/>
+    <id>https://dmego.me/2018/11/04/decision-making-under-uncertainty.html</id>
+    <published>2018-11-04T20:26:00.000Z</published>
+    <updated>2019-12-22T18:21:32.505Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;&lt;img src=&quot;/2018/11/04/decision-making-under-uncertainty/supplyimg.png&quot; width=&quot;200px&quot;&gt;&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Operations Research" scheme="https://dmego.me/tags/Operations-Research/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis 逆向工程中使用 Mysql 8.0 版本驱动遇到的问题</title>
+    <link href="https://dmego.me/2018/10/10/mysql8-mybatis-geneator.html"/>
+    <id>https://dmego.me/2018/10/10/mysql8-mybatis-geneator.html</id>
+    <published>2018-10-10T06:49:00.000Z</published>
+    <updated>2019-12-22T18:21:32.541Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+ &lt;center&gt;
+&lt;img src=&quot;/2018/10/10/mysql8-mybatis-geneator/mybatis-logo.png&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Mybatis" scheme="https://dmego.me/tags/Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC连接Mysql数据库出现的问题汇总</title>
+    <link href="https://dmego.me/2018/10/10/java-connect-mysql-error.html"/>
+    <id>https://dmego.me/2018/10/10/java-connect-mysql-error.html</id>
+    <published>2018-10-10T04:10:20.000Z</published>
+    <updated>2019-12-22T18:21:32.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/10/10/java-connect-mysql-error/MySQL.png&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Mysql" scheme="https://dmego.me/tags/Mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis系列(二):Redis的数据类型及命令操作</title>
+    <link href="https://dmego.me/2018/10/05/learn-redis-2.html"/>
+    <id>https://dmego.me/2018/10/05/learn-redis-2.html</id>
+    <published>2018-10-05T15:30:11.000Z</published>
+    <updated>2019-12-22T18:21:32.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/10/05/learn-redis-2/redis-white.png&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;redis-中常用命令&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Redis" scheme="https://dmego.me/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis系列(一):Redis的简介与安装</title>
+    <link href="https://dmego.me/2018/10/04/learn-redis-1.html"/>
+    <id>https://dmego.me/2018/10/04/learn-redis-1.html</id>
+    <published>2018-10-04T02:02:31.000Z</published>
+    <updated>2019-12-22T18:21:32.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/10/04/learn-redis-1/redis-white.png&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;什么是-redis&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Redis" scheme="https://dmego.me/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么说java中只有值传递</title>
+    <link href="https://dmego.me/2018/08/27/java-only-pass-by-value.html"/>
+    <id>https://dmego.me/2018/08/27/java-only-pass-by-value.html</id>
+    <published>2018-08-27T17:59:31.000Z</published>
+    <updated>2019-12-22T18:21:32.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;2018/08/27/java-only-pass-by-value#前言&quot;&gt;&lt;/a&gt; 前言&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="https://dmego.me/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于ubuntu16.04部署IBM开源区块链项目-弹珠资产管理(Marbles)</title>
+    <link href="https://dmego.me/2018/05/15/deploy-IBM-blockchain-marbles.html"/>
+    <id>https://dmego.me/2018/05/15/deploy-IBM-blockchain-marbles.html</id>
+    <published>2018-05-15T22:21:00.000Z</published>
+    <updated>2019-12-22T18:21:32.505Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;&lt;img src=&quot;/2018/05/15/deploy-IBM-blockchain-marbles/cEFkbDKmj9.png&quot; width=&quot;300px&quot;&gt;&lt;/center&gt;
+##
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Hyperledger Fabric" scheme="https://dmego.me/tags/Hyperledger-Fabric/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于ubuntu16.04快速构建Hyperledger Fabric网络</title>
+    <link href="https://dmego.me/2018/05/14/quick-start-hyperledger-fabric.html"/>
+    <id>https://dmego.me/2018/05/14/quick-start-hyperledger-fabric.html</id>
+    <published>2018-05-14T23:56:00.000Z</published>
+    <updated>2019-12-22T18:21:32.541Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/05/14/quick-start-hyperledger-fabric/fEAgecbB2l.png&quot; width=&quot;300px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Hyperledger Fabric" scheme="https://dmego.me/tags/Hyperledger-Fabric/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>fastJosn使用总结</title>
+    <link href="https://dmego.me/2018/05/13/using-fastjson.html"/>
+    <id>https://dmego.me/2018/05/13/using-fastjson.html</id>
+    <published>2018-05-13T19:56:00.000Z</published>
+    <updated>2019-12-22T18:21:32.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2018/05/13/using-fastjson/cE7H2aLhmC.jpg&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java" scheme="https://dmego.me/tags/Java/"/>
+    
+      <category term="JSON" scheme="https://dmego.me/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序：出发吧一起</title>
+    <link href="https://dmego.me/2017/12/04/wechat-app-together.html"/>
+    <id>https://dmego.me/2017/12/04/wechat-app-together.html</id>
+    <published>2017-12-04T13:45:00.000Z</published>
+    <updated>2019-12-22T18:21:32.545Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;center&gt;
+&lt;img src=&quot;/2017/12/04/wechat-app-together/mjIhk6LFBE.png&quot; width=&quot;250px&quot;&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="微信小程序" scheme="https://dmego.me/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Travis CI自动部署Hexo到GitHub</title>
+    <link href="https://dmego.me/2017/10/13/deylpoy-hexo-with-TravisCI.html"/>
+    <id>https://dmego.me/2017/10/13/deylpoy-hexo-with-TravisCI.html</id>
+    <published>2017-10-13T17:46:00.000Z</published>
+    <updated>2019-12-22T18:21:32.525Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;2017/10/13/deylpoy-hexo-with-TravisCI#前言&quot;&gt;&lt;/a&gt; 前言&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Hexo" scheme="https://dmego.me/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git学习笔记</title>
+    <link href="https://dmego.me/2017/08/26/learn-git.html"/>
+    <id>https://dmego.me/2017/08/26/learn-git.html</id>
+    <published>2017-08-26T10:36:00.000Z</published>
+    <updated>2019-12-22T18:21:32.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;2017/08/26/learn-git#前言&quot;&gt;&lt;/a&gt; 前言&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Git" scheme="https://dmego.me/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>汉诺塔的图解递归算法</title>
+    <link href="https://dmego.me/2016/10/16/hanoi.html"/>
+    <id>https://dmego.me/2016/10/16/hanoi.html</id>
+    <published>2016-10-16T01:56:00.000Z</published>
+    <updated>2019-12-22T18:21:32.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;起源&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;2016/10/16/hanoi#起源&quot;&gt;&lt;/a&gt; 起源&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://dmego.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="https://dmego.me/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+</feed>
