@@ -97,7 +97,7 @@ sudo apt-get upgade
 
 `Windows Terminal` 是`win`推出的最新的一款命令行工具，可以在应用商店里搜索并下载，安装完成打开界面如下
 
-![Windows Terminal](make-wsl2-as-a-productivity-tool\image1.png)
+![Windows Terminal](make-wsl2-as-a-productivity-tool/image1.png)
 
 关于其的介绍这里就不多展开，这里记录如何使用`Windows Terminal` 连接`WSL 2`并安装配置`zsh`。
 
@@ -174,7 +174,7 @@ source ~/.zshrc
 
 配置完成之后，默认的主题光标如下所示，如果想要配置更加丰富的主题，可以自行百度
 
-![默认配置](make-wsl2-as-a-productivity-tool\image2.png)
+![默认配置](make-wsl2-as-a-productivity-tool/image2.png)
 
 # 安装并配置`Docker`环境
 
@@ -249,18 +249,18 @@ sudo rm -rf /var/lib/docker
 
 - 启用基于实验性`WSL 2`的引擎复选框(`Enable the experimental WSL 2 based engine`)
 
-    ![启用基于实验性 WSL2 的引擎复选框](make-wsl2-as-a-productivity-tool\Untitled.png)
+    ![启用基于实验性 WSL2 的引擎复选框](make-wsl2-as-a-productivity-tool/Untitled.png)
 
 - (*) 暴露 `2375` 端口，让外部其他程序也能管理 `Docker` (打开 `Expose daemon on tcp://localhost:2375 without TLS` 前面的复选框)
 - 在 `Resources` 中设置要从哪个 `WSL 2` 发行版中访问 `Docker`，如下图使用的是 `Ubuntu-18.04`
 
-    ![设置 Docker 访问的发行版](make-wsl2-as-a-productivity-tool\Untitled1.png)
+    ![设置 Docker 访问的发行版](make-wsl2-as-a-productivity-tool/Untitled1.png)
 
 配置完成之后,点击 `Apply & Restart` 应用并重启 `Docker Desktop` 。重启完成之后，我们看到 `Desktop` 左下脚的 `Docker` 状态为绿色的 `running` 表示 `Docker` 正在运行。
 
 要想知道自己安装的 `Docker` 的相关版本信息，我们可以在 `About Docker Desktop` 中看到，如下图所示，目前安装的 `Docker Engine` 版本为 `19.03.5` ，`Docker-compose` 版本为 `1.25.1-rc1` ，支持的 `Kubernetes` 版本为 `v1.15.5`  。
 
-![查看 Desktop 版本](make-wsl2-as-a-productivity-tool\Untitled2.png)
+![查看 Desktop 版本](make-wsl2-as-a-productivity-tool/Untitled2.png)
 
 # 安装并配置 `Kubernetes` 环境
 
@@ -324,7 +324,7 @@ k8s.gcr.io/pause                                                 3.1            
 
 我们在 `Docker Desktop` 的设置中选择启用 `kubernetes` ，然后点击 `Apply & Restart` 重启。
 
-![启用 Kubernetes ](make-wsl2-as-a-productivity-tool\Untitled3.png)
+![启用 Kubernetes ](make-wsl2-as-a-productivity-tool/Untitled3.png)
 
 如果运气好的话，当你重启之后你就会发现 `Desktop` 左下脚 `Docker` 和 `Kubernetes` 的状态都变成了绿色的 `runnning` ，但是很有可能你重启之后， `kubernetes` 的状态一直是黄色的 `starting` 。出现这种情况不要着急，我们可以在 `C:\ProgramData\DockerDesktop`下的 `service.txt` 查看启动的日志信息，一般情况下，启动不成功，出现最多的日志信息为下面的重复内容
 
@@ -342,7 +342,7 @@ k8s.gcr.io/pause                                                 3.1            
 - 关闭 `win` 的网络防火墙，或者将 `vpnkit.exe` 添加到防火墙出入站规则中。
 - 在 `Desktop` 中点击进入 `troubleshoot` ，点击重置 `kubernetes` 集群(`Reset Kubernetes cluster`)
 
-    ![重置 kubernetes 集群](make-wsl2-as-a-productivity-tool\Untitled4.png)
+    ![重置 kubernetes 集群](make-wsl2-as-a-productivity-tool/Untitled4.png)
 
 如果上述操作一次下来还是不成功，建议重复操作几次。如果出现了其他的问题，一般到 [docker\for-win](https://github.com/docker/for-win/issues) 项目的 `issue`下可以找到解决方法。如果启动成功了，我们在命令行下执行下面的命令可以验证
 
